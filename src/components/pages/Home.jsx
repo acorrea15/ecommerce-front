@@ -3,7 +3,7 @@ import { Button } from "react-bootstrap";
 import Carrusel from "../carrusel/Carrusel";
 import Navegacion from "../navegacion/Navegacion";
 import Tarjetas from "../tarjetas/Tarjetas";
-import Tabla from "../tabla/Tabla";
+/* import Tabla from "../tabla/Tabla"; */
 
 const Home = () => {
   
