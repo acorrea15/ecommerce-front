@@ -20,7 +20,7 @@ const Home = () => {
 
   useEffect(() => {
     console.log("se ejecuto el useEffect cuando se modifica nuestra variable");
-  };
+  });
 
   return (
     <>
