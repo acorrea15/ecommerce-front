@@ -1,6 +1,7 @@
 import axios from "../axios";
 import React, { useRef, useState } from "react";
 import { Navbar, Button, Nav, NavDropdown, Container } from "react-bootstrap";
+// Utilización de redux en lugar de context:
 import { useDispatch, useSelector } from "react-redux";
 import { LinkContainer } from "react-router-bootstrap";
 import { logout, resetNotifications } from "../features/userSlice";
@@ -8,6 +9,7 @@ import "./Navigation.css";
 
 function Navigation() {
     const user = useSelector((state) => state.user);
+    // dispatch: ejecuta la acción que actualiza el state
     const dispatch = useDispatch();
     const bellRef = useRef(null);
     const notificationRef = useRef(null);
@@ -30,16 +32,19 @@ function Navigation() {
     }
 
     return (
-        <Navbar  expand="lg">
+        <Navbar expand="lg">
 
-            
+
             <Container className="containergeneral">
-                <LinkContainer to="/">
-                    
-                    <Navbar.Brand>  Ecommerce - 5I </Navbar.Brand>
-                    
-                    
-                </LinkContainer>
+
+                {/* problema para cambiar las fuentes a color blanco */}
+
+                {/* Problema para renderizar el logo */}
+                {/* <a class="navbar-brand" href="#">
+                    <img id="logo" src= "../imágenes/logodefinitivo.jpg">  </img>  </a>
+ */}
+
+                <LinkContainer to="/">  <Navbar.Brand>  Ecommerce - 5I </Navbar.Brand> </LinkContainer>
 
                 <Nav.Link classname="texto" href="#features">Sobre Nosotros</Nav.Link>
                 <Nav.Link href="#pricing">Sucursales</Nav.Link>
