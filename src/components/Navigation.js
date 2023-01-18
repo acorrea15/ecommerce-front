@@ -41,10 +41,10 @@ function Navigation() {
                     
                 </LinkContainer>
 
-                <Nav.Link classname="texto" href="#features">Sobre Nosotros</Nav.Link>
-                <Nav.Link href="#pricing">Sucursales</Nav.Link>
+                <Nav.Link style={{ color: "black" }}  href="#features">Sobre Nosotros</Nav.Link>
+                <Nav.Link style={{ color: "black" }} href="#pricing">Sucursales</Nav.Link>
 
-                <NavDropdown title="Categorías" id="collasible-nav-dropdown">
+                <NavDropdown style={{ color: "black" }} title="Categorías" id="collasible-nav-dropdown">
                     <NavDropdown.Item href="#action/3.1">Tecnología</NavDropdown.Item>
                     <NavDropdown.Item href="#action/3.2">Teléfonos
                     </NavDropdown.Item>
