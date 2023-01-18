@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { useLoginMutation } from "../services/appApi";
 
 function Login() {
+
+    // Definición de los estados de usuario 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [login, { isError, isLoading, error }] = useLoginMutation();
