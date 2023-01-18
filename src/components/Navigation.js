@@ -46,7 +46,7 @@ function Navigation() {
 
                 <LinkContainer to="/">  <Navbar.Brand>  Ecommerce - 5I </Navbar.Brand> </LinkContainer>
 
-                <Nav.Link classname="texto" href="#features">Sobre Nosotros</Nav.Link>
+                <Nav.Link className="texto" href="#features">Sobre Nosotros</Nav.Link>
                 <Nav.Link href="#pricing">Sucursales</Nav.Link>
 
                 <NavDropdown title="Categorías" id="collasible-nav-dropdown">
