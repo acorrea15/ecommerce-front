@@ -30,13 +30,18 @@ function Navigation() {
     }
 
     return (
-        <Navbar bg="light" expand="lg">
+        <Navbar  expand="lg">
+
+            
             <Container className="containergeneral">
                 <LinkContainer to="/">
-                    <Navbar.Brand>Ecommerce - 5I</Navbar.Brand>
+                    
+                    <Navbar.Brand>  Ecommerce - 5I </Navbar.Brand>
+                    
+                    
                 </LinkContainer>
 
-                <Nav.Link href="#features">Sobre Nosotros</Nav.Link>
+                <Nav.Link classname="texto" href="#features">Sobre Nosotros</Nav.Link>
                 <Nav.Link href="#pricing">Sucursales</Nav.Link>
 
                 <NavDropdown title="Categorías" id="collasible-nav-dropdown">

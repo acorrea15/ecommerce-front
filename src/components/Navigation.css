@@ -6,12 +6,16 @@
 .logo {
     width: 50px;
 }
+
+.texto{
+    color: aliceblue;
+}
 .containergeneral{
     background-color: #77dd77;
     -webkit-box-shadow: -9px 10px 5px -8px rgba(0,0,0,0.75);
 -moz-box-shadow: -9px 10px 5px -8px rgba(0,0,0,0.75);
 box-shadow: -9px 10px 5px -8px rgba(0,0,0,0.75);
-color: aliceblue !important; 
+
 
 }
 
