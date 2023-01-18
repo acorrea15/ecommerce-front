@@ -14,7 +14,7 @@ import CartPage from "./pages/CartPage";
 import OrdersPage from "./pages/OrdersPage";
 import AdminDashboard from "./pages/AdminDashboard";
 import EditProductPage from "./pages/EditProductPage";
-// import Footer from ".components/Footer.jsx;"
+import Footer from "./components/Footer"
 import { useEffect } from "react";
 import { io } from "socket.io-client";
 import { addNotification } from "./features/userSlice";
@@ -72,6 +72,7 @@ function App() {
                     {/* <Route path="/footer" element={<Footer />} /> */}
 
                 </Routes>
+                <Footer/>
             </BrowserRouter>
         </div>
     );
