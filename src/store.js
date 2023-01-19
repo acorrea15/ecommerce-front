@@ -1,10 +1,10 @@
-// Este es el store del redux toolkit
+// Este es el store del redux toolkit: importación de los Slice y la api
 import { configureStore } from "@reduxjs/toolkit";
 import productSlice from "./features/productSlice";
 import userSlice from "./features/userSlice";
 import appApi from "./services/appApi";
 
-//persit our store
+//persit our store - instalar las librerías redux persist y thunk
 import storage from "redux-persist/lib/storage";
 import { combineReducers } from "redux";
 import { persistReducer } from "redux-persist";
