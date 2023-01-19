@@ -10,13 +10,15 @@ import { combineReducers } from "redux";
 import { persistReducer } from "redux-persist";
 import thunk from "redux-thunk";
 
-//reducers
+//reducers: combinación de los reductores para que estén dentro del mismo objeto: productSlice y userSlice en el mismo reducer
 const reducer = combineReducers({
     user: userSlice,
     products: productSlice,
+    // con el siguiente código actualiza el estado: 
     [appApi.reducerPath]: appApi.reducer,
 });
 
+// Utiliza la combinación de reducers: 
 const persistConfig = {
     key: "root",
     storage,
@@ -26,7 +28,7 @@ const persistConfig = {
 // persist our store
 const persistedReducer = persistReducer(persistConfig, reducer);
 
-// creating the store
+// creación de un store:
 
 const store = configureStore({
     reducer: persistedReducer,
