@@ -1,3 +1,4 @@
+// Componente categoría: crea objeto con nombre e imágen a insertar en el home
 const categories = [
     {
         name: "Technology",
