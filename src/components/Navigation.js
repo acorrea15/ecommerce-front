@@ -3,6 +3,7 @@ import React, { useRef, useState } from "react";
 import { Navbar, Button, Nav, NavDropdown, Container } from "react-bootstrap";
 // Utilización de redux en lugar de context:
 import { useDispatch, useSelector } from "react-redux";
+// El link container se utiliza cuando hay componentes que utilizan links 
 import { LinkContainer } from "react-router-bootstrap";
 import { logout, resetNotifications } from "../features/userSlice";
 import "./Navigation.css";
@@ -33,12 +34,9 @@ function Navigation() {
 
     return (
         <Navbar expand="lg">
-
-
             <Container className="containergeneral">
 
                 {/* problema para cambiar las fuentes a color blanco */}
-
                 {/* Problema para renderizar el logo */}
                 {/* <a class="navbar-brand" href="#">
                     <img id="logo" src= "../imágenes/logodefinitivo.jpg">  </img>  </a>
@@ -46,8 +44,8 @@ function Navigation() {
 
                 <LinkContainer to="/">  <Navbar.Brand>  Ecommerce - 5I </Navbar.Brand> </LinkContainer>
 
-                <Nav.Link className="texto" href="#features">Sobre Nosotros</Nav.Link>
-                <Nav.Link href="#pricing">Sucursales</Nav.Link>
+                <Nav.Link className="texto" href="#sobrenosotros">Sobre Nosotros</Nav.Link>
+                <Nav.Link href="#sucursales">Sucursales</Nav.Link>
 
                 <NavDropdown title="Categorías" id="collasible-nav-dropdown">
                     <NavDropdown.Item href="#action/3.1">Tecnología</NavDropdown.Item>
@@ -95,17 +93,17 @@ function Navigation() {
                                                 <NavDropdown.Item>Dashboard</NavDropdown.Item>
                                             </LinkContainer>
                                             <LinkContainer to="/new-product">
-                                                <NavDropdown.Item>Create Product</NavDropdown.Item>
+                                                <NavDropdown.Item>Crear producto</NavDropdown.Item>
                                             </LinkContainer>
                                         </>
                                     )}
                                     {!user.isAdmin && (
                                         <>
                                             <LinkContainer to="/cart">
-                                                <NavDropdown.Item>Cart</NavDropdown.Item>
+                                                <NavDropdown.Item>Carrito</NavDropdown.Item>
                                             </LinkContainer>
                                             <LinkContainer to="/orders">
-                                                <NavDropdown.Item>My orders</NavDropdown.Item>
+                                                <NavDropdown.Item>Mis compras</NavDropdown.Item>
                                             </LinkContainer>
                                         </>
                                     )}

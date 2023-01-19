@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-
-// appApi
+// creado a partir de la librería de redux: slice para productos
+// appApi: llamada a la api para conectar redux con la api que se crea en el archivo appApi.js
 import appApi from "../services/appApi";
 
 const initialState = [];
@@ -8,6 +8,7 @@ const initialState = [];
 export const productSlice = createSlice({
     name: "products",
     initialState,
+    // Los reducers permiten actualizar el estado inicial del estado mediante la acción 
     reducers: {
         updateProducts: (_, action) => {
             return action.payload;

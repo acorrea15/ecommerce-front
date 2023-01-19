@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-// create the api
+// create the api y conexión con redux
 
 export const appApi = createApi({
     reducerPath: "appApi",

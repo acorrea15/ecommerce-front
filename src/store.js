@@ -1,3 +1,4 @@
+// Este es el store del redux toolkit
 import { configureStore } from "@reduxjs/toolkit";
 import productSlice from "./features/productSlice";
 import userSlice from "./features/userSlice";

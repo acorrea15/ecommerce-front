@@ -40,7 +40,8 @@ function Home() {
             <div className="recent-products-container container mt-4">
                 <h2>Productos por categorías</h2>
                 <Row>
-                    {/* Mapeo del componente categoría con un map */}
+                    {/* Mapeo del componente categoría con un map 
+                    El link container se utiliza para redireccionar a otra página dentro de un componente*/}
                     {categories.map((category) => (
                         <LinkContainer to={`/category/${category.name.toLocaleLowerCase()}`}>
                             <Col md={4}>

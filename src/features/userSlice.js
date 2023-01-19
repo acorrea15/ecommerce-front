@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-// appApi
+// appApi: lógica similar al productSlice
 import appApi from "../services/appApi";
 
 const initialState = null;
