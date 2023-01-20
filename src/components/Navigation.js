@@ -80,7 +80,7 @@ function Navigation() {
                             </LinkContainer>
                         )}
 
-                        {/* if user */}
+                        {/* Si el usuario está registrado: campana, etc*/}
                         {user && (
                             <>
                                 <Nav.Link style={{ position: "relative" }} onClick={handleToggleNotifications}>
@@ -93,17 +93,17 @@ function Navigation() {
                                                 <NavDropdown.Item>Dashboard</NavDropdown.Item>
                                             </LinkContainer>
                                             <LinkContainer to="/new-product">
-                                                <NavDropdown.Item>Create Product</NavDropdown.Item>
+                                                <NavDropdown.Item>Crear producto</NavDropdown.Item>
                                             </LinkContainer>
                                         </>
                                     )}
                                     {!user.isAdmin && (
                                         <>
                                             <LinkContainer to="/cart">
-                                                <NavDropdown.Item>Cart</NavDropdown.Item>
+                                                <NavDropdown.Item>Carrito</NavDropdown.Item>
                                             </LinkContainer>
                                             <LinkContainer to="/orders">
-                                                <NavDropdown.Item>My orders</NavDropdown.Item>
+                                                <NavDropdown.Item>Mis compras</NavDropdown.Item>
                                             </LinkContainer>
                                         </>
                                     )}
