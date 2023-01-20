@@ -10,9 +10,10 @@ function Signup() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [name, setName] = useState("");
+    // dependiendo del estado del signupmutation nos da los siguientes estados: 
     const [signup, { error, isLoading, isError }] = useSignupMutation();
 
-    // función signup
+    // función signup con los datos de la constante signup:
     function handleSignup(e) {
         e.preventDefault();
         signup({ name, email, password });
@@ -24,6 +25,7 @@ function Signup() {
                 <Col md={6} className="signup__form--container">
                     <Form style={{ width: "100%" }} onSubmit={handleSignup}>
                         <h1>Crear cuenta</h1>
+                        {/* Si sale error traemos el error con la estética boostrap */}
                         {isError && <Alert variant="danger">{error.data}</Alert>}
                         <Form.Group>
                             <Form.Label>Nombre</Form.Label>
@@ -46,7 +48,7 @@ function Signup() {
                             </Button>
                         </Form.Group>
                         <p className="pt-3 text-center">
-                            ¿todavía no tenés cuenta? <Link to="/login">Login</Link>{" "}
+                            ¿todavía no tenés cuenta? <Link to="/login">Crear cuenta</Link>{" "}
                         </p>
                     </Form>
                 </Col>
