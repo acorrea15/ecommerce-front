@@ -5,13 +5,13 @@ import productSlice from "./features/productSlice";
 import userSlice from "./features/userSlice";
 import appApi from "./services/appApi";
 
-//persit our store: 
+//importación guardado en store: Si salimos de la página no tenemos que loguearnos de nuevo, se guarda todo en el store. 
 import storage from "redux-persist/lib/storage";
 import { combineReducers } from "redux";
 import { persistReducer } from "redux-persist";
 import thunk from "redux-thunk";
 
-//reducers
+//reducers: combinación de los reductores para tener varios slice de productos en el mismo objeto: 
 const reducer = combineReducers({
     user: userSlice,
     products: productSlice,
@@ -24,14 +24,14 @@ const persistConfig = {
     blackList: [appApi.reducerPath, "products"],
 };
 
-// persist our store
+// reductores que persisten en el store:
 const persistedReducer = persistReducer(persistConfig, reducer);
 
-// creating the store
+// creación del store:
+
 
 const store = configureStore({
     reducer: persistedReducer,
     middleware: [thunk, appApi.middleware],
 });
-
 export default store;
