@@ -6,10 +6,10 @@ export default function App() {
     <MDBFooter className='footer text-center text-black m-4 ' style={{ backgroundColor: '#ffe600' }}>
       <MDBContainer className='p-4 footer'></MDBContainer>
 
-      <div className='text-center p-3 footer' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
+      <div className='text-center p-3 m4 footer' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
         © 2020 Copyright:Comisión 5I
       </div>
-        <a className='text-black' href='/signup'>
+        <a className='text-black p-3 m-4' href='/signup'>
           E-Commerce 5I
         </a>
     </MDBFooter>
