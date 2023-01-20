@@ -66,7 +66,7 @@ function Navigation() {
                             </LinkContainer>
                         )}
 
-                        {/* Si el usuario está registrado o es admin redirigir a cart */}
+                        {/* Si el usuario está registrado o es admin mostrar cart */}
                         {user && !user.isAdmin && (
                             <LinkContainer to="/cart">
                                 <Nav.Link>
@@ -80,13 +80,15 @@ function Navigation() {
                             </LinkContainer>
                         )}
 
-                        {/* Si el usuario está registrado: campana, etc*/}
+                        {/* Si el usuario está registrado: campana, notificaciones etc*/}
                         {user && (
                             <>
                                 <Nav.Link style={{ position: "relative" }} onClick={handleToggleNotifications}>
                                     <i className="fas fa-bell" ref={bellRef} data-count={unreadNotifications || null}></i>
                                 </Nav.Link>
                                 <NavDropdown title={`${user.email}`} id="basic-nav-dropdown">
+
+                                    {/* Si el usuario es administrador: habilita dashboard y creación de producto  */}
                                     {user.isAdmin && (
                                         <>
                                             <LinkContainer to="/admin">
@@ -97,6 +99,7 @@ function Navigation() {
                                             </LinkContainer>
                                         </>
                                     )}
+                                    {/* Si el usuario no es un administrador:  */}
                                     {!user.isAdmin && (
                                         <>
                                             <LinkContainer to="/cart">
