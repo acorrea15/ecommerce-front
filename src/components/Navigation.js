@@ -38,8 +38,13 @@ function Navigation() {
             
             <Container className="containergeneral">
                 <LinkContainer to="/">
+
+                    {/* <Nav.Link> <img src="../src/imágenes/logodefinitivo.jpg" width="30px" height="10px"/>
+
+
+                    </Nav.Link> */}
                     
-                    <Navbar.Brand>  ECOMMERCE - 5I </Navbar.Brand>
+                    <Navbar.Brand >  ECOMMERCE - 5I </Navbar.Brand>
                     
                     
                 </LinkContainer>
