@@ -13,6 +13,9 @@ function Navigation() {
     const notificationRef = useRef(null);
     const [bellPos, setBellPos] = useState({});
 
+    // Función para logout (debe estar en los reducers de los slice!!!
+    // En redux debe asociarse al dispatch
+
     function handleLogout() {
         dispatch(logout());
     }
@@ -110,6 +113,8 @@ function Navigation() {
                                             </LinkContainer>
                                         </>
                                     )}
+
+                                    {/* Botón para salir de la sesión (ya sea usuario o admin) con función handlelogout */}
 
                                     <NavDropdown.Divider />
                                     <Button variant="danger" onClick={handleLogout} className="logout-btn">
