@@ -4,8 +4,6 @@
 }
 
 
-
-
 .containergeneral{
     background-color: #f0fc4d;
     -webkit-box-shadow: -9px 10px 5px -8px rgba(0,0,0,0.75);
@@ -13,6 +11,10 @@
 box-shadow: -9px 10px 5px -8px rgba(0,0,0,0.75);
 
 
+}
+
+.login{
+    
 }
 
 #cartcount {

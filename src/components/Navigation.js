@@ -62,7 +62,7 @@ function Navigation() {
                         {/* if no user */}
                         {!user && (
                             <LinkContainer to="/login" >
-                                <Nav.Link className="login">Login</Nav.Link>
+                                <Nav.Link className='text-primary login'>Login</Nav.Link>
                             </LinkContainer>
                         )}
                         {user && !user.isAdmin && (

@@ -1,3 +1,5 @@
+// archivo de store de redux: importación de los ucer y productSlice. Importación de la Api
+
 import { configureStore } from "@reduxjs/toolkit";
 import productSlice from "./features/productSlice";
 import userSlice from "./features/userSlice";
