@@ -30,14 +30,19 @@ function Navigation() {
     }
 
     return (
-        <Navbar expand="lg">
+        <Navbar  expand="lg">
 
-
+            
             <Container className="containergeneral">
-                <LinkContainer to="/"><Navbar.Brand>  ECOMMERCE - 5I </Navbar.Brand> </LinkContainer>
+                <LinkContainer to="/">
+                    
+                    <Navbar.Brand>  ECOMMERCE - 5I </Navbar.Brand>
+                    
+                    
+                </LinkContainer>
 
-                <Nav.Link href="#features">Sobre Nosotros</Nav.Link>
-                <Nav.Link href="#pricing">Sucursales</Nav.Link>
+                <Nav.Link   href="#features">Sobre Nosotros</Nav.Link>
+                <Nav.Link  href="#pricing">Sucursales</Nav.Link>
 
                 <NavDropdown title="Categorías" id="collasible-nav-dropdown">
                     <NavDropdown.Item href="#action/3.1">Tecnología</NavDropdown.Item>
@@ -54,14 +59,14 @@ function Navigation() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
-                        {/* si no hay usuario: visualizar el link de login */}
+                        {/* si no hay un usuario registrado mostrar el botón login */}
                         {!user && (
                             <LinkContainer to="/login" >
                                 <Nav.Link className='text-primary login'>Login</Nav.Link>
                             </LinkContainer>
                         )}
 
-                        {/* Si el usuario está registrado o es un admin: dirigir al link de carrito */}
+                        {/* Si el usuario está registrado o es admin redirigir a cart */}
                         {user && !user.isAdmin && (
                             <LinkContainer to="/cart">
                                 <Nav.Link>
