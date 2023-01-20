@@ -19,6 +19,8 @@ export const userSlice = createSlice({
             });
         },
     },
+
+    // Reductores extras: Ej: pone el nuevo usuario como pauload para guardar datos del signup en el store
     extraReducers: (builder) => {
         builder.addMatcher(appApi.endpoints.signup.matchFulfilled, (_, { payload }) => payload);
         builder.addMatcher(appApi.endpoints.login.matchFulfilled, (_, { payload }) => payload);
