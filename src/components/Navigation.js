@@ -36,19 +36,20 @@ function Navigation() {
             <Container className="containergeneral">
                 <LinkContainer to="/">
                     
-                    <Navbar.Brand>  Ecommerce - 5I </Navbar.Brand>
+                    <Navbar.Brand>  ECOMMERCE - 5I </Navbar.Brand>
                     
                     
                 </LinkContainer>
 
-                <Nav.Link style={{ color: "black" }}  href="#features">Sobre Nosotros</Nav.Link>
-                <Nav.Link style={{ color: "black" }} href="#pricing">Sucursales</Nav.Link>
+                <Nav.Link   href="#features">Sobre Nosotros</Nav.Link>
+                <Nav.Link  href="#pricing">Sucursales</Nav.Link>
 
-                <NavDropdown style={{ color: "black" }} title="Categorías" id="collasible-nav-dropdown">
+                <NavDropdown title="Categorías" id="collasible-nav-dropdown">
                     <NavDropdown.Item href="#action/3.1">Tecnología</NavDropdown.Item>
                     <NavDropdown.Item href="#action/3.2">Teléfonos
                     </NavDropdown.Item>
                     <NavDropdown.Item href="#action/3.3">Laptops</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.3">Notebooks</NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item href="#action/3.4">
                         Otros productos
@@ -61,7 +62,7 @@ function Navigation() {
                         {/* if no user */}
                         {!user && (
                             <LinkContainer to="/login">
-                                <Nav.Link>Login</Nav.Link>
+                                <Nav.Link className="login">Login</Nav.Link>
                             </LinkContainer>
                         )}
                         {user && !user.isAdmin && (
