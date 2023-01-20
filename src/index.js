@@ -12,6 +12,7 @@ import persistStore from "redux-persist/es/persistStore";
 // Creación del store-persist: 
 const persistedStore = persistStore(store);
 
+// Función para que el usuario y los productos seleccionados persistan en el caso que refresquemos la página: 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <Provider store={store}>
