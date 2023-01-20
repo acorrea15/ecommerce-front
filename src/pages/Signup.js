@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import "./Signup.css";
 import { useSignupMutation } from "../services/appApi";
 
+// Estados iniciales de los usuarios: 
+
 function Signup() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
