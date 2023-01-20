@@ -61,7 +61,7 @@ function Navigation() {
                     <Nav className="ms-auto">
                         {/* if no user */}
                         {!user && (
-                            <LinkContainer to="/login">
+                            <LinkContainer to="/login" >
                                 <Nav.Link className="login">Login</Nav.Link>
                             </LinkContainer>
                         )}
