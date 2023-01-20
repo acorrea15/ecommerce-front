@@ -5,7 +5,7 @@ import productSlice from "./features/productSlice";
 import userSlice from "./features/userSlice";
 import appApi from "./services/appApi";
 
-//persit our store
+//persit our store: 
 import storage from "redux-persist/lib/storage";
 import { combineReducers } from "redux";
 import { persistReducer } from "redux-persist";
