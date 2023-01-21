@@ -48,9 +48,12 @@ function Navigation() {
                     
                     
                 </LinkContainer>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
 
                 <Nav.Link   href="#features">Sobre Nosotros</Nav.Link>
                 <Nav.Link  href="#pricing">Sucursales</Nav.Link>
+                <Nav.Link  href="#pricing">Contáctenos</Nav.Link>
 
                 <NavDropdown title="Categorías" id="collasible-nav-dropdown">
                     <NavDropdown.Item href="#action/3.1">Tecnología</NavDropdown.Item>
@@ -64,8 +67,6 @@ function Navigation() {
                     </NavDropdown.Item>
                 </NavDropdown>
 
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
                         {/* si no hay un usuario registrado mostrar el botón login */}
                         {!user && (
