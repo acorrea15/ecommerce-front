@@ -13,7 +13,19 @@
     transition: all 0.3s;
     margin-top: 30px;
 }
-
+.textocontainer{
+    background-color: #f0fc4d;
+    -webkit-box-shadow: 0px -4px 18px -5px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px -4px 18px -5px rgba(0,0,0,0.75);
+box-shadow: 0px -4px 18px -5px rgba(0,0,0,0.75);
+margin-left: 25em;
+margin-right: 25em;
+border-radius: 5%;
+}
+.texto{
+    color: rgb(8, 8, 8);
+   
+}
 .card {
     border: none !important;
     width: 15rem !important;
@@ -24,6 +36,7 @@ img.card-img-top.product-preview-img {
 
 .category-tile:hover {
     transform: scale(1.05);
+    filter: brightness(1.5);
 }
 
 .sale__banner--container img {

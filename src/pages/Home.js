@@ -18,10 +18,13 @@ function Home() {
     }, []);
     return (
         <div>
-            <img src=" https://res.cloudinary.com/learn-code-10/image/upload/v1653947013/yqajnhqf7usk56zkwqi5.png" className="home-banner" />
+            <img width="1000e" src=" https://mrcompras.com/wp-content/uploads/2020/12/mr-compras-portada-venta-al-mayoreo.jpg" className="home-banner" />
             <div className="featured-products-container container mt-4">
-                <h2>Ofertas</h2>
+                <div className="textocontainer">
+                <h2 className="texto">Ofertas</h2>
                 {/* last products here */}
+
+                </div>
                 <div className="d-flex justify-content-center flex-wrap">
                     {lastProducts.map((product) => (
                         <ProductPreview {...product} />
@@ -38,7 +41,10 @@ function Home() {
                 <img src="https://res.cloudinary.com/learn-code-10/image/upload/v1654093280/xkia6f13xxlk5xvvb5ed.png" />
             </div>
             <div className="recent-products-container container mt-4">
-                <h2>Productos por categorías</h2>
+                <div className="textocontainer">
+                <h2 className="texto">Productos por categorías</h2>
+
+                </div>
                 <Row>
                     {categories.map((category) => (
                         <LinkContainer to={`/category/${category.name.toLocaleLowerCase()}`}>
