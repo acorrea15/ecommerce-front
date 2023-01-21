@@ -60,33 +60,33 @@ function NewProduct() {
             <Row>
                 <Col md={6} className="new-product__form--container">
                     <Form style={{ width: "100%" }} onSubmit={handleSubmit}>
-                        <h1 className="mt-4">Create a product</h1>
-                        {isSuccess && <Alert variant="success">Product created with succcess</Alert>}
+                        <h1 className="mt-4">Crear producto</h1>
+                        {isSuccess && <Alert variant="success">Producto creado de forma exitorsa</Alert>}
                         {isError && <Alert variant="danger">{error.data}</Alert>}
                         <Form.Group className="mb-3">
-                            <Form.Label>Product name</Form.Label>
+                            <Form.Label>Nombre del producto</Form.Label>
                             <Form.Control type="text" placeholder="Enter product name" value={name} required onChange={(e) => setName(e.target.value)} />
                         </Form.Group>
 
                         <Form.Group className="mb-3">
-                            <Form.Label>Product description</Form.Label>
+                            <Form.Label>Descripción del producto</Form.Label>
                             <Form.Control as="textarea" placeholder="Product description" style={{ height: "100px" }} value={description} required onChange={(e) => setDescription(e.target.value)} />
                         </Form.Group>
 
                         <Form.Group className="mb-3">
-                            <Form.Label>Price($)</Form.Label>
+                            <Form.Label>Precio($)</Form.Label>
                             <Form.Control type="number" placeholder="Price ($)" value={price} required onChange={(e) => setPrice(e.target.value)} />
                         </Form.Group>
 
                         <Form.Group className="mb-3" onChange={(e) => setCategory(e.target.value)}>
-                            <Form.Label>Category</Form.Label>
+                            <Form.Label>Categoría</Form.Label>
                             <Form.Select>
                                 <option disabled selected>
                                     -- Select One --
                                 </option>
-                                <option value="technology">technology</option>
+                                <option value="technology">tecnología</option>
                                 <option value="tablets">tablets</option>
-                                <option value="phones">phones</option>
+                                <option value="phones">Teléfonos</option>
                                 <option value="laptops">laptops</option>
                             </Form.Select>
                         </Form.Group>
@@ -107,7 +107,7 @@ function NewProduct() {
 
                         <Form.Group>
                             <Button type="submit" disabled={isLoading || isSuccess}>
-                                Create Product
+                                Crear producto
                             </Button>
                         </Form.Group>
                     </Form>
