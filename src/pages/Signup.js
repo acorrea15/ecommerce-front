@@ -24,13 +24,15 @@ function Signup() {
 
      function handleSignup(e) { 
         e.preventDefault();
-        console.log(password, confirmPassword, "<--CONTRASEÑAS")
+        
+        
         if(password === confirmPassword){
             Swal.fire({
               icon: "success",
               title: "Registrado!",
               text: "Registro exitoso!",
             });
+            signup({ name, email, password });
             reset();
           } else {
             Swal.fire({
