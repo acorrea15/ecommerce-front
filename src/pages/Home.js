@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { updateProducts } from "../features/productSlice";
 import ProductPreview from "../components/ProductPreview";
 
+
 function Home() {
     const dispatch = useDispatch();
     const products = useSelector((state) => state.products);
@@ -17,6 +18,7 @@ function Home() {
         axios.get("/products").then(({ data }) => dispatch(updateProducts(data)));
     }, []);
     return (
+        
         <div className="body p-2">
             
             <div className="featured-products-container container mt-4">

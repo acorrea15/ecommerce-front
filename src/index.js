@@ -9,6 +9,7 @@ import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import persistStore from "redux-persist/es/persistStore";
 
+
 // Creación del store-persist: 
 const persistedStore = persistStore(store);
 
@@ -18,6 +19,7 @@ root.render(
     <Provider store={store}>
         <PersistGate loading={<div>Loading...</div>} persistor={persistedStore}>
             <App />
+        
         </PersistGate>
     </Provider>
 );
