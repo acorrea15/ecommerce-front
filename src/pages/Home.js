@@ -21,7 +21,8 @@ function Home() {
             
             <div className="featured-products-container container mt-4">
                 <div className="textocontainer">
-                <h2 className="texto">Ofertas: 25 al 29 de octubre</h2>
+                    
+                <h2 className="texto p-2">Ofertas: 25 al 29 de octubre</h2>
                 {/* last products here */}
 
                 </div>
@@ -42,7 +43,7 @@ function Home() {
             </div>
             <div className="recent-products-container container mt-4">
                 <div className="textocontainer">
-                <h2 className="texto">Productos por categorías</h2>
+                <h2 className="texto p-2">Productos por categorías</h2>
 
                 </div>
                 <Row>

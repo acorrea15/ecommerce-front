@@ -14,7 +14,7 @@ function Carrusel() {
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3>¿Listo para trabajar desde casa?</h3>
+         
           <p>Accesorios a tu medida</p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -26,7 +26,7 @@ function Carrusel() {
         />
 
         <Carousel.Caption>
-          <h3>E commerce 5I: tu mejor opción</h3>
+          
           <p>Envíos gratis miércoles y viernes</p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -38,7 +38,7 @@ function Carrusel() {
         />
 
         <Carousel.Caption>
-          <h3>La tecnología a solo un click</h3>
+          
           <p>
             Asesoramiento técnico en todos nuestros productos
           </p>
