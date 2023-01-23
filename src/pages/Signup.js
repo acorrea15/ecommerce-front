@@ -3,16 +3,42 @@ import { Container, Row, Col, Form, Button, Alert } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./Signup.css";
 import { useSignupMutation } from "../services/appApi";
+import Swal from "sweetalert2";
+import { useForm } from "react-hook-form";
+import * as yup from "yup";
+const schema = yup.object({
+    firstName: yup.string().required(),
+    age: yup.number().positive().integer().required(),
+  }).required();
+
 
 function Signup() {
+    const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [name, setName] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
+
+    const { register, formState: { errors }, handleSubmit, reset, setValue } = useForm();
+    
     const [signup, { error, isLoading, isError }] = useSignupMutation();
 
-    function handleSignup(e) {
+     function handleSignup(e) { 
         e.preventDefault();
-        signup({ name, email, password });
+        console.log(password, confirmPassword, "<--CONTRASEÑAS")
+        if(password === confirmPassword){
+            Swal.fire({
+              icon: "success",
+              title: "Registrado!",
+              text: "Registro exitoso!",
+            });
+            reset();
+          } else {
+            Swal.fire({
+              icon: "error",
+              title: "Las contraseñas no coinciden",
+              text: "Error de confirmación de contraseñas. Verifique las contraseñas ingresadas.",
+            });
+          }
     }
 
     return (
@@ -32,9 +58,14 @@ function Signup() {
                             <Form.Control type="email" placeholder="Enter email" value={email} required onChange={(e) => setEmail(e.target.value)} />
                         </Form.Group>
 
-                        <Form.Group className="mb-3">
+                        <Form.Group className="mb-3 mt-3">
                             <Form.Label>Password</Form.Label>
                             <Form.Control type="password" placeholder="Enter Password" value={password} required onChange={(e) => setPassword(e.target.value)} />
+                        </Form.Group>
+
+                        <Form.Group className="mb-3">
+                            <Form.Label>Confirme el Password</Form.Label>
+                            <Form.Control type="password" placeholder="Re-Enter Password" value={confirmPassword} required onChange={(e) => setConfirmPassword(e.target.value)} />
                         </Form.Group>
 
                         <Form.Group>
@@ -43,7 +74,7 @@ function Signup() {
                             </Button>
                         </Form.Group>
                         <p className="pt-3 text-center">
-                            Don't have an account? <Link to="/login">Login</Link>{" "}
+                            ¿Ya tiene una cuenta? <Link to="/login">Login</Link>{" "}
                         </p>
                     </Form>
                 </Col>
