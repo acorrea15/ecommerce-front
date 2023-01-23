@@ -6,6 +6,7 @@ export const appApi = createApi({
     reducerPath: "appApi",
     baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:8080" }),
     endpoints: (builder) => ({
+
         signup: builder.mutation({
             query: (user) => ({
                 url: "/users/signup",
@@ -90,6 +91,17 @@ export const appApi = createApi({
                 body,
             }),
         }),
+
+        // send email
+        sendEmail: builder.mutation({
+            query: (body) => ({
+                url: "/sendemails/api/send-email",
+                body,
+                method: "POST",
+            }),
+        }),
+
+
     }),
 });
 
@@ -104,6 +116,7 @@ export const {
     useCreateOrderMutation,
     useDeleteProductMutation,
     useUpdateProductMutation,
+    useSendEmailMutation,
 } = appApi;
 
 export default appApi;

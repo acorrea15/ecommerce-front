@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Table } from "react-bootstrap";
+import { Table, Button, Badge } from "react-bootstrap";
 import axios from "../axios";
 import Loading from "./Loading";
 function ClientsAdminPage() {
@@ -18,10 +18,47 @@ function ClientsAdminPage() {
                 setLoading(false);
                 console.log(e);
             });
+
+            
     }, []);
 
     if (loading) return <Loading />;
     if (users?.length == 0) return <h2 className="py-2 text-center">No users yet</h2>;
+
+    
+    function markDisable(userId) {
+        console.log(userId, "<-- userId: markDisable")
+        axios
+            .patch(`/users/${userId}/mark-disabled`)
+            .then(  setLoading(true),              
+                    axios
+                        .get("/users")
+                        .then(({ data }) => {
+                            setLoading(false);
+                            setUsers(data);
+                        })
+                        .catch((e) => {
+                            setLoading(false);
+                            console.log(e);
+                        })
+            )
+            .then(  //setLoading(true),              
+                    axios
+                        .get("/users")
+                        .then(({ data }) => {
+                            setLoading(false);
+                            setUsers(data);
+                        })
+                        .catch((e) => {
+                            setLoading(false);
+                            console.log(e);
+                        })
+            )
+
+            .catch((e) => console.log(e));           
+    }
+    
+
 
     return (
         <Table responsive striped bordered hover>
@@ -30,6 +67,7 @@ function ClientsAdminPage() {
                     <th>Client Id</th>
                     <th>Client Name</th>
                     <th>Email</th>
+                    <th>Estado</th>
                 </tr>
             </thead>
             <tbody>
@@ -38,6 +76,15 @@ function ClientsAdminPage() {
                         <td>{user._id}</td>
                         <td>{user.name}</td>
                         <td>{user.email}</td>
+                        <td>
+                            {user.isEnabled === true ? (                                 
+                                <Button className="btn-success" size="sm" onClick={() => markDisable(user._id)}>
+                                    Habilitado - Presione para Inhabilitar
+                                </Button>
+                            ) : (
+                                <Badge bg="danger">¡Inhabilitado!</Badge>
+                            )}
+                        </td>
                     </tr>
                 ))}
             </tbody>

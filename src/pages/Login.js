@@ -2,14 +2,37 @@ import React, { useState } from "react";
 import { Button, Col, Container, Form, Row, Alert } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useLoginMutation } from "../services/appApi";
+import axios from "axios";
+ 
 
 function Login() {
+    
+    
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [login, { isError, isLoading, error }] = useLoginMutation();
+
+    const sendEmail = async (e) => {
+      //e.preventDefault();  
+      const data = {
+        email,
+      };  
+
+      const response = await axios.post(
+        "http://localhost:8080/api/sendemail",
+        data
+      );
+      console.log(response.data, "<<<-- Envío mail!!!!!");
+    };
+
+
+     
     function handleLogin(e) {
         e.preventDefault();
         login({ email, password });
+        console.log("Antes de sendEmail")
+        sendEmail();
+        console.log("Luego de sendEmail")
     }
     return (
         <Container>
@@ -41,7 +64,28 @@ function Login() {
                 </Col>
                 <Col md={6} className="login__image--container"></Col>
             </Row>
+
+            <h1>ss</h1>
+            <div className="--flex-center --bg-primary --100vh">
+                <div className="--width-500px --card --p --bg-light">
+                    <form className="--form-control" onSubmit={sendEmail}>
+                    <input
+                        type="email"
+                        placeholder="Email"
+                        required
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                    />
+                    <button type="submit" className="--btn --btn-primary">
+                        Send Email
+                    </button>
+                    </form>
+                </div>
+            </div>
+
         </Container>
+
+        
     );
 }
 
