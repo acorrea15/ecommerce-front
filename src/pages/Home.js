@@ -17,7 +17,7 @@ function Home() {
         axios.get("/products").then(({ data }) => dispatch(updateProducts(data)));
     }, []);
     return (
-        <div className="body">
+        <div className="body p-2">
             
             <div className="featured-products-container container mt-4">
                 <div className="textocontainer">

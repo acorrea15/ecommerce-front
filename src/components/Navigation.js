@@ -37,7 +37,7 @@ function Navigation() {
 
   return (
     <Navbar expand="lg">
-      <Container className="containergeneral">
+      <Container className="containergeneral ">
           <Navbar.Brand href="#home">
             <img
               src= {logo}
@@ -71,7 +71,7 @@ function Navigation() {
           <Nav className="ms-auto">
             {/* si no hay un usuario registrado mostrar el botón login */}
             {!user && (
-              <LinkContainer to="/login">
+              <LinkContainer  to="/login">
                 <Nav.Link className="text-primary login">Login</Nav.Link>
               </LinkContainer>
             )}
@@ -167,7 +167,7 @@ function Navigation() {
             </p>
           ))
         ) : (
-          <p>No notifcations yet</p>
+          <p>todavía no hay notificaciones</p>
         )}
       </div>
     </Navbar>
