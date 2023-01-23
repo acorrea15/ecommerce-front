@@ -17,11 +17,11 @@ function Home() {
         axios.get("/products").then(({ data }) => dispatch(updateProducts(data)));
     }, []);
     return (
-        <div>
-            <img width="1000e" src=" https://mrcompras.com/wp-content/uploads/2020/12/mr-compras-portada-venta-al-mayoreo.jpg" className="home-banner" />
+        <div className="body">
+            
             <div className="featured-products-container container mt-4">
                 <div className="textocontainer">
-                <h2 className="texto">Ofertas</h2>
+                <h2 className="texto">Ofertas: 25 al 29 de octubre</h2>
                 {/* last products here */}
 
                 </div>
