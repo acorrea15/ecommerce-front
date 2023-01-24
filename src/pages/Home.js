@@ -8,6 +8,7 @@ import "./Home.css";
 import { useDispatch, useSelector } from "react-redux";
 import { updateProducts } from "../features/productSlice";
 import ProductPreview from "../components/ProductPreview";
+import Carrusel from "../components/Carrusel";
 
 
 function Home() {
@@ -20,6 +21,7 @@ function Home() {
     return (
         
         <div className="body p-2">
+                    <Carrusel/>
             
             <div className="featured-products-container container mt-4">
                 <div className="textocontainer">
@@ -39,10 +41,10 @@ function Home() {
                     </Link>
                 </div>
             </div>
-            {/* sale banner */}
             <div className="sale__banner--container mt-4">
                 <img src="https://res.cloudinary.com/learn-code-10/image/upload/v1654093280/xkia6f13xxlk5xvvb5ed.png" />
             </div>
+
             <div className="recent-products-container container mt-4">
                 <div className="textocontainer">
                 <h2 className="texto p-2">Productos por categorías</h2>

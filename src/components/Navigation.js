@@ -58,10 +58,10 @@ function Navigation() {
           <Nav.Link href="#pricing">Contáctenos</Nav.Link>
 
           <NavDropdown title="Categorías" id="collasible-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1">Tecnología</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">Teléfonos</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3">Laptops</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3">Notebooks</NavDropdown.Item>
+            <NavDropdown.Item href="http://localhost:3000/category/technology">Tecnología</NavDropdown.Item>
+            <NavDropdown.Item href="http://localhost:3000/category/technology">Teléfonos</NavDropdown.Item>
+            <NavDropdown.Item href="http://localhost:3000/category/technology">Laptops</NavDropdown.Item>
+            <NavDropdown.Item href="http://localhost:3000/category/technology">Notebooks</NavDropdown.Item>
             <NavDropdown.Divider />
             <NavDropdown.Item href="#action/3.4">
               Otros productos

@@ -17,7 +17,7 @@ import EditProductPage from "./pages/EditProductPage";
 import { useEffect } from "react";
 import { io } from "socket.io-client";
 import { addNotification } from "./features/userSlice";
-import Carrusel from "./components/Carrusel";
+// import Carrusel from "./components/Carrusel";
 
 
 function App() {
@@ -43,7 +43,7 @@ function App() {
             <BrowserRouter>
                 <ScrollToTop />
                 <Navigation />
-                <Carrusel/>
+                {/* <Carrusel/> */}
                 
                 <Routes>
                     <Route index element={<Home />} />
