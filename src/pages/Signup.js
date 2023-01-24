@@ -33,8 +33,7 @@ function Signup() {
 
         if(password === confirmPassword)
         {
-            signup({ name, email, password });             
-           
+            signup({ name, email, password });           
         }
         else
         {
@@ -135,6 +134,9 @@ function Signup() {
                         </Form.Group>
                         <p className="pt-3 text-center">
                             ¿Ya tiene una cuenta? <Link to="/login">Login</Link>{" "}
+                        </p>
+                        <p className="pt-3 text-center">
+                            ¿Olvidó su contraseña? <Link to="/restore">Restaurar contraseña</Link>{" "}
                         </p>
                     </Form>
                 </Col>

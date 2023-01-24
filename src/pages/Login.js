@@ -37,6 +37,9 @@ function Login() {
                         <p className="pt-3 text-center">
                             Don't have an account? <Link to="/signup">Create account</Link>{" "}
                         </p>
+                        <p className="pt-3 text-center">
+                            ¿Olvidó su contraseña? <Link to="/restore">Restaurar contraseña</Link>{" "}
+                        </p>
                     </Form>
                 </Col>
                 <Col md={6} className="login__image--container"></Col>
