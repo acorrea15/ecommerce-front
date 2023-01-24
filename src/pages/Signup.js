@@ -134,10 +134,7 @@ function Signup() {
                         </Form.Group>
                         <p className="pt-3 text-center">
                             ¿Ya tiene una cuenta? <Link to="/login">Login</Link>{" "}
-                        </p>
-                        <p className="pt-3 text-center">
-                            ¿Olvidó su contraseña? <Link to="/restore">Restaurar contraseña</Link>{" "}
-                        </p>
+                        </p>                        
                     </Form>
                 </Col>
                 <Col md={6} className="signup__image--container"></Col>
