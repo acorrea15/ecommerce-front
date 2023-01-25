@@ -43,7 +43,7 @@ function Signup() {
                             </Button>
                         </Form.Group>
                         <p className="pt-3 text-center texto">
-                            ¿No tienes cuenta? <Link to="/login">Login</Link>{" "}
+                            ¿Ya tienes cuenta? <Link to="/login">Login</Link>{" "}
                         </p>
                     </Form>
                 </Col>
