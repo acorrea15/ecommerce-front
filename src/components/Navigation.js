@@ -49,15 +49,15 @@ function Navigation() {
           </Navbar.Brand>
         <LinkContainer to="/">
 
-          <Navbar.Brand> ECOMMERCE - 5I </Navbar.Brand>
+          <Navbar.Brand className="texto"> ECOMMERCE - 5I </Navbar.Brand>
         </LinkContainer>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav.Link href="#features">Sobre Nosotros</Nav.Link>
-          <Nav.Link href="#pricing">Sucursales</Nav.Link>
-          <Nav.Link href="#pricing">Contáctenos</Nav.Link>
+          <Nav.Link className="texto" href="#features">Sobre Nosotros</Nav.Link>
+          <Nav.Link className="texto" href="#Sucursales">Sucursales</Nav.Link>
+          <Nav.Link className="texto" href="#pricing">Contáctenos</Nav.Link>
 
-          <NavDropdown title="Categorías" id="collasible-nav-dropdown">
+          <NavDropdown className="texto" title="Categorías" id="collasible-nav-dropdown">
             <NavDropdown.Item href="http://localhost:3000/category/technology">Tecnología</NavDropdown.Item>
             <NavDropdown.Item href="http://localhost:3000/category/technology">Teléfonos</NavDropdown.Item>
             <NavDropdown.Item href="http://localhost:3000/category/technology">Laptops</NavDropdown.Item>
