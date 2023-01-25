@@ -56,6 +56,8 @@ function Navigation() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav.Link className="texto" href="#features">Sobre Nosotros</Nav.Link>
           <Nav.Link className="texto" to={NotFound}>Sucursales</Nav.Link>
+          {/* <Link className="texto" to={NotFound}>Sucursales</Link> */}
+          
           <Nav.Link className="texto" href="#pricing">Contáctenos</Nav.Link>
 
           <NavDropdown className="texto" title="Categorías" id="collasible-nav-dropdown">
