@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { updateProducts } from "../features/productSlice";
 import ProductPreview from "../components/ProductPreview";
 import Carrusel from "../components/Carrusel";
+import Image from 'react-bootstrap/Image'
 
 
 function Home() {
@@ -41,10 +42,17 @@ function Home() {
                     </Link>
                 </div>
             </div>
-            <div className="sale__banner--container mt-4">
-            <img  src="https://cdn.mos.cms.futurecdn.net/ZefaoejrEEiKKo7pBmCaL6.jpg" className="img-fluid rounded" alt="..." />
-                {/* <img class="img-fluid" src="https://cdn.mos.cms.futurecdn.net/ZefaoejrEEiKKo7pBmCaL6.jpg" /> */}
-            </div>
+
+            <Image src="https://cdn.mos.cms.futurecdn.net/ZefaoejrEEiKKo7pBmCaL6.jpg" className="img-fluid rounded" alt="...">
+
+
+            </Image>
+
+       
+
+           
+           
+      
 
             <div className="recent-products-container container mt-4">
                 <div className="textocontainer">
