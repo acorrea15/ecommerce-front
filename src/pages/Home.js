@@ -42,7 +42,7 @@ function Home() {
                 </div>
             </div>
             <div className="sale__banner--container mt-4">
-                <img src="https://res.cloudinary.com/learn-code-10/image/upload/v1654093280/xkia6f13xxlk5xvvb5ed.png" />
+                <img src="https://cdn.mos.cms.futurecdn.net/ZefaoejrEEiKKo7pBmCaL6.jpg" />
             </div>
 
             <div className="recent-products-container container mt-4">
