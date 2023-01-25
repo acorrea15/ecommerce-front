@@ -1,11 +1,12 @@
 import axios from "../axios";
 import React, { useRef, useState } from "react";
-import { Navbar, Button, Nav, NavDropdown, Container } from "react-bootstrap";
+import { Navbar, Button, Nav, NavDropdown, Container} from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import { LinkContainer } from "react-router-bootstrap";
+import { LinkContainer} from "react-router-bootstrap";
 import { logout, resetNotifications } from "../features/userSlice";
 import "./Navigation.css";
 import logo from '../imágenes/logodefinitivo.jpg'
+import NotFound from "../pages/NotFound";
 
 function Navigation() {
   const user = useSelector((state) => state.user);
@@ -54,7 +55,7 @@ function Navigation() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav.Link className="texto" href="#features">Sobre Nosotros</Nav.Link>
-          <Nav.Link className="texto" href="#Sucursales">Sucursales</Nav.Link>
+          <Nav.Link className="texto" to={NotFound}>Sucursales</Nav.Link>
           <Nav.Link className="texto" href="#pricing">Contáctenos</Nav.Link>
 
           <NavDropdown className="texto" title="Categorías" id="collasible-nav-dropdown">
