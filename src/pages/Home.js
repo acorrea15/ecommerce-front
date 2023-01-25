@@ -42,7 +42,7 @@ function Home() {
                 </div>
             </div>
             <div className="sale__banner--container mt-4">
-            <img  src="https://cdn.mos.cms.futurecdn.net/ZefaoejrEEiKKo7pBmCaL6.jpg" className="img-fluid" alt="..." />
+            <img  src="https://cdn.mos.cms.futurecdn.net/ZefaoejrEEiKKo7pBmCaL6.jpg" className="img-fluid rounded" alt="..." />
                 {/* <img class="img-fluid" src="https://cdn.mos.cms.futurecdn.net/ZefaoejrEEiKKo7pBmCaL6.jpg" /> */}
             </div>
 
