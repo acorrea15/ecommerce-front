@@ -1,3 +1,15 @@
+
+.textotitulo{
+
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+  
+
+}
+.texto{
+    font-size: 20px;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+}
+
 .signup__image--container {
     background-image: url(https://images.unsplash.com/photo-1612690669207-fed642192c40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8dGVjaHxlbnwwfDF8MHx3aGl0ZXw%3D&auto=format&fit=crop&w=800&q=60);
     height: 100vh;
