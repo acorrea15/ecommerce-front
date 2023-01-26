@@ -17,6 +17,7 @@ import EditProductPage from "./pages/EditProductPage";
 import { useEffect } from "react";
 import { io } from "socket.io-client";
 import { addNotification } from "./features/userSlice";
+import NotFound from "./pages/NotFound";
 // import Carrusel from "./components/Carrusel";
 
 
@@ -68,9 +69,9 @@ function App() {
                     )}
                     <Route path="/product/:id" element={<ProductPage />} />
                     <Route path="/category/:category" element={<CategoryPage />} />
-
+                            {/* Final de ruteo: importar componente y hacer ruta de esta manera:  */}
                     <Route path="/new-product" element={<NewProduct />} />
-
+                    <Route path="/notfound" element={<NotFound />} />
                     <Route path="*" element={<Home />} />
                     
 
