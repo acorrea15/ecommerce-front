@@ -40,7 +40,7 @@ function Navigation() {
                 <Nav.Link href="#pricing">Sucursales</Nav.Link>
 
                 <NavDropdown title="Categorías" id="collasible-nav-dropdown">
-                    <NavDropdown.Item href="#action/3.1">Electrodomésticos</NavDropdown.Item>
+                    <NavDropdown.Item href="/category/all">Electrodomésticos</NavDropdown.Item>
                     <NavDropdown.Item href="#action/3.2">Computadoras y accesorios
                     </NavDropdown.Item>
                     <NavDropdown.Item href="#action/3.3">Moviliario de oficina</NavDropdown.Item>

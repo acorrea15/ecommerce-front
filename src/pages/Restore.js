@@ -26,8 +26,10 @@ function Restore() {
         
      function handleRestore(e) { 
         //e.preventDefault();   
-        alert("Se envió un mail a la casilla indicada para continuar con el proceso de restauración de conrtraseña.")
-        sendEmail();       
+        
+        sendEmail();    
+        
+         
 
     }
 
@@ -39,10 +41,17 @@ function Restore() {
         };
     
         const response = await axios.post(
-          "http://localhost:8080/api/sendemail",
+        /*"http://localhost:8080/api/sendemail", */
+          "http://localhost:8080/forgot-password",
           data
         );
-        console.log(response.data);
+        console.log(response.data, "<<----- sendEmail!!!!!forgot-password!!!!!!");
+        console.log(response.data.status, "<<<<----ES response.data.status!!!!!!!!!");
+
+        if (response.data.status == "El usuario no existe!!")
+            alert("El usuario no existe!!!!!")
+        else
+            alert("Se envió un mail a la casilla indicada para continuar con el proceso de restauración de conrtraseña.")    
       };
     
         
@@ -79,7 +88,7 @@ function Restore() {
                          
                     </Form>
                 </Col>
-                <Col md={6} className="signup__image--container"></Col>
+                <Col md={6} className="signup__image--container2"></Col>
             </Row>
         </Container>
     );
