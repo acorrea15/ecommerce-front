@@ -11,7 +11,7 @@ export default function NotFound() {
 
 
 
-    {/* <Image src="https://colorlib.com/wp/wp-content/uploads/sites/2/404-error-template-3.png" className="img-fluid rounded" alt="error 404"></Image> */}
+    <Image src="https://colorlib.com/wp/wp-content/uploads/sites/2/404-error-template-3.png" className="img-fluid rounded" alt="error 404"></Image>
     
 
             
