@@ -18,14 +18,12 @@ import Footer from "./components/Footer"
 import { useEffect } from "react";
 import { io } from "socket.io-client";
 import { addNotification } from "./features/userSlice";
-<<<<<<< HEAD
+
 
 // import Carrusel from "./components/Carrusel";
 
 
-=======
 /**/
->>>>>>> ce48ba837c4d103ab4a65839bb6ad0781ae9e574
 function App() {
     const user = useSelector((state) => state.user);
     const dispatch = useDispatch();
@@ -80,15 +78,9 @@ function App() {
                     <Route path="*" element={<Home />} />
 
                 </Routes>
-<<<<<<< HEAD
 
-                <Footer />
-             
-
-=======
                 <Footer/>
->>>>>>> ce48ba837c4d103ab4a65839bb6ad0781ae9e574
-            </BrowserRouter>
+          </BrowserRouter>
         </div>
     );
 }

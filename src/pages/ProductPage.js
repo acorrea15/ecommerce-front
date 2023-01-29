@@ -76,14 +76,8 @@ function ProductPage() {
                                 <option value="5" >5</option>
                                 <option value="6" >6</option>
                             </Form.Select>
-<<<<<<< HEAD
-                            <Button size="lg" onClick={() => addToCart({ userId: user._id, productId: id, price: product.price, image: product.pictures[0].url })}>
-                                Agregar al carrito
-=======
-                       
                             <Button size="lg" onClick={() => addToCart({ userId: user._id, productId: id, price: product.price, image: product.pictures[0].url, cant: cant })}>
-                                Add to cart
->>>>>>> ce48ba837c4d103ab4a65839bb6ad0781ae9e574
+                                Agregar al carrito
                             </Button>
                         </ButtonGroup>
                     )}
