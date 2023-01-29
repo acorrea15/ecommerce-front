@@ -20,7 +20,7 @@ function Home() {
         <div>
             <img src=" https://res.cloudinary.com/learn-code-10/image/upload/v1653947013/yqajnhqf7usk56zkwqi5.png" className="home-banner" />
             <div className="featured-products-container container mt-4">
-                <h2>Last products</h2>
+                <h2>Ofertas</h2>
                 {/* last products here */}
                 <div className="d-flex justify-content-center flex-wrap">
                     {lastProducts.map((product) => (
@@ -29,7 +29,7 @@ function Home() {
                 </div>
                 <div>
                     <Link to="/category/all" style={{ textAlign: "right", display: "block", textDecoration: "none" }}>
-                        See more {">>"}
+                        ver más {">>"}
                     </Link>
                 </div>
             </div>
@@ -38,7 +38,7 @@ function Home() {
                 <img src="https://res.cloudinary.com/learn-code-10/image/upload/v1654093280/xkia6f13xxlk5xvvb5ed.png" />
             </div>
             <div className="recent-products-container container mt-4">
-                <h2>Categories</h2>
+                <h2>Productos por categorías</h2>
                 <Row>
                     {categories.map((category) => (
                         <LinkContainer to={`/category/${category.name.toLocaleLowerCase()}`}>

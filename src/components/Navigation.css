@@ -7,6 +7,18 @@
     width: 50px;
 }
 
+.texto{
+    color: aliceblue;
+}
+.containergeneral{
+    background-color: #77dd77;
+    -webkit-box-shadow: -9px 10px 5px -8px rgba(0,0,0,0.75);
+-moz-box-shadow: -9px 10px 5px -8px rgba(0,0,0,0.75);
+box-shadow: -9px 10px 5px -8px rgba(0,0,0,0.75);
+
+
+}
+
 #cartcount {
     font-size: 10px;
     background-color: red;
@@ -33,7 +45,7 @@
     max-height: 200px;
     overflow-y: scroll;
     border: 1px solid gray;
-    background-color: white;
+    background-color: #77dd77;
     width: 200px;
     z-index: 99;
 }

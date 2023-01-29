@@ -30,20 +30,25 @@ function Navigation() {
     }
 
     return (
-        <Navbar bg="light" expand="lg">
-            <Container>
+        <Navbar  expand="lg">
+
+            
+            <Container className="containergeneral">
                 <LinkContainer to="/">
-                    <Navbar.Brand>Ecommerce - 5I</Navbar.Brand>
+                    
+                    <Navbar.Brand>  Ecommerce - 5I </Navbar.Brand>
+                    
+                    
                 </LinkContainer>
 
-                <Nav.Link href="#features">Sobre Nosotros</Nav.Link>
+                <Nav.Link className="texto" href="#features">Sobre Nosotros</Nav.Link>
                 <Nav.Link href="#pricing">Sucursales</Nav.Link>
 
                 <NavDropdown title="Categorías" id="collasible-nav-dropdown">
-                    <NavDropdown.Item href="#action/3.1">Electrodomésticos</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Computadoras y accesorios
+                    <NavDropdown.Item href="#action/3.1">Tecnología</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.2">Teléfonos
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Moviliario de oficina</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.3">Laptops</NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item href="#action/3.4">
                         Otros productos
