@@ -74,10 +74,10 @@ function App() {
                     <Route path="/new-product" element={<NewProduct />} />
 
                     <Route path="*" element={<Home />} />
-                    <Footer />
 
                 </Routes>
 
+                <Footer />
              
 
             </BrowserRouter>
