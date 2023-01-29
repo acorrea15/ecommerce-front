@@ -18,7 +18,7 @@ import Footer from "./components/Footer"
 import { useEffect } from "react";
 import { io } from "socket.io-client";
 import { addNotification } from "./features/userSlice";
-
+import NotFound from "./pages/NotFound";
 
 // import Carrusel from "./components/Carrusel";
 
@@ -76,7 +76,7 @@ function App() {
                     <Route path="/new-product" element={<NewProduct />} />
 
                     <Route path="*" element={<Home />} />
-
+                    <Route path="/notfound" element={<NotFound />} />      
                 </Routes>
 
                 <Footer/>

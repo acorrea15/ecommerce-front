@@ -55,14 +55,14 @@ function Navigation() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav.Link className="texto" href="#features">Sobre Nosotros</Nav.Link>
-          <Nav.Link className="texto" href="#Sucursales">Sucursales</Nav.Link>
+          <Nav.Link className="texto" href="/notfound">Sucursales</Nav.Link>
           <Nav.Link className="texto" href="#pricing">Contáctenos</Nav.Link>
 
           <NavDropdown className="texto" title="Categorías" id="collasible-nav-dropdown">
-            <NavDropdown.Item href="http://localhost:3000/category/technology">Tecnología</NavDropdown.Item>
-            <NavDropdown.Item href="http://localhost:3000/category/technology">Teléfonos</NavDropdown.Item>
-            <NavDropdown.Item href="http://localhost:3000/category/technology">Laptops</NavDropdown.Item>
-            <NavDropdown.Item href="http://localhost:3000/category/technology">Notebooks</NavDropdown.Item>
+            <NavDropdown.Item href="/category/technology">Tecnología</NavDropdown.Item>
+            <NavDropdown.Item href="/category/technology">Teléfonos</NavDropdown.Item>
+            <NavDropdown.Item href="/category/technology">Laptops</NavDropdown.Item>
+            <NavDropdown.Item href="/category/technology">Notebooks</NavDropdown.Item>
             <NavDropdown.Divider />
             <NavDropdown.Item href="#action/3.4">
               Otros productos
