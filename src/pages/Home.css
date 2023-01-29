@@ -1,3 +1,13 @@
+.body{
+    background-color: rgb(236, 242, 223);
+    
+
+}
+.texto{
+    font-size: 20px;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+}
+
 .category-tile {
     height: 250px;
     background-size: cover;
@@ -13,6 +23,16 @@
     transition: all 0.3s;
     margin-top: 30px;
 }
+.textocontainer{
+    background-color: #f0fc4d;
+    opacity: 0.9;
+    
+    -webkit-box-shadow: 0px -4px 18px -5px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px -4px 18px -5px rgba(0,0,0,0.75);
+box-shadow: 0px -4px 18px -5px rgba(0,0,0,0.75);
+
+border-radius: 5%;
+}
 
 .card {
     border: none !important;
@@ -24,6 +44,7 @@ img.card-img-top.product-preview-img {
 
 .category-tile:hover {
     transform: scale(1.05);
+    filter: brightness(1.5);
 }
 
 .sale__banner--container img {

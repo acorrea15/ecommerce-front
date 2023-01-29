@@ -1,22 +1,27 @@
+/* botón logout */
 .logout-btn {
     margin: 0 auto;
     display: block !important;
 }
-
-.logo {
-    width: 50px;
-}
-
 .texto{
-    color: aliceblue;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+
 .containergeneral{
-    background-color: #77dd77;
+    background-color: #f0fc4d;
     -webkit-box-shadow: -9px 10px 5px -8px rgba(0,0,0,0.75);
 -moz-box-shadow: -9px 10px 5px -8px rgba(0,0,0,0.75);
 box-shadow: -9px 10px 5px -8px rgba(0,0,0,0.75);
 
 
+}
+
+/* No funciona el hover */
+.login :hover{
+    transition: 0.5s;
+    color: rgb(250, 250, 250);
 }
 
 #cartcount {

@@ -64,7 +64,7 @@ function ProductPage() {
                     </p>
                     <p className="product__price">${product.price}</p>
                     <p style={{ textAlign: "justify" }} className="py-3">
-                        <strong>Description:</strong> {product.description}
+                        <strong>Descripción:</strong> {product.description}
                     </p>
                     {user && !user.isAdmin && (
                         <ButtonGroup style={{ width: "90%" }}>
@@ -76,22 +76,27 @@ function ProductPage() {
                                 <option value="5" >5</option>
                                 <option value="6" >6</option>
                             </Form.Select>
+<<<<<<< HEAD
+                            <Button size="lg" onClick={() => addToCart({ userId: user._id, productId: id, price: product.price, image: product.pictures[0].url })}>
+                                Agregar al carrito
+=======
                        
                             <Button size="lg" onClick={() => addToCart({ userId: user._id, productId: id, price: product.price, image: product.pictures[0].url, cant: cant })}>
                                 Add to cart
+>>>>>>> ce48ba837c4d103ab4a65839bb6ad0781ae9e574
                             </Button>
                         </ButtonGroup>
                     )}
                     {user && user.isAdmin && (
                         <LinkContainer to={`/product/${product._id}/edit`}>
-                            <Button size="lg">Edit Product</Button>
+                            <Button size="lg">Editar producto</Button>
                         </LinkContainer>
                     )}
                     {isSuccess && <ToastMessage bg="info" title="Added to cart" body={`${product.name} is in your cart`} />}
                 </Col>
             </Row>
             <div className="my-4">
-                <h2>Similar Products</h2>
+                <h2>Productos similares</h2>
                 <div className="d-flex justify-content-center align-items-center flex-wrap">
                     <AliceCarousel mouseTracking items={similarProducts} responsive={responsive} controlsStrategy="alternate" />
                 </div>

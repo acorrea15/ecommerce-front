@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-// create the api
+// creación de la api 
 
 export const appApi = createApi({
     reducerPath: "appApi",
@@ -21,7 +21,7 @@ export const appApi = createApi({
                 body: user,
             }),
         }),
-        // creating product
+        // creación de producto
         createProduct: builder.mutation({
             query: (product) => ({
                 url: "/products",
