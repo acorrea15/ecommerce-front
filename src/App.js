@@ -14,9 +14,11 @@ import CartPage from "./pages/CartPage";
 import OrdersPage from "./pages/OrdersPage";
 import AdminDashboard from "./pages/AdminDashboard";
 import EditProductPage from "./pages/EditProductPage";
+import Footer from "./components/Footer"
 import { useEffect } from "react";
 import { io } from "socket.io-client";
 import { addNotification } from "./features/userSlice";
+
 // import Carrusel from "./components/Carrusel";
 
 
@@ -72,7 +74,7 @@ function App() {
                     <Route path="/new-product" element={<NewProduct />} />
 
                     <Route path="*" element={<Home />} />
-                    
+                    <Footer />
 
                 </Routes>
 
