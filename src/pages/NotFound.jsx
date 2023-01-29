@@ -5,8 +5,8 @@ import Image from 'react-bootstrap/Image'
 export default function NotFound() {
     return (
         <div>
-            <h1>Oops! este enlace está fuera de servicio.</h1>
-{/*             <p>Utilizar el siguiente link:<Link to='/'>Home</Link></p> */}
+{/*             <h1>Oops! este enlace está fuera de servicio.</h1> */}
+            <p>Utilizar el siguiente link:<Link to='/'>Home</Link></p>
             
 
 
