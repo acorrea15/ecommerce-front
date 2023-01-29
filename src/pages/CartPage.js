@@ -20,7 +20,7 @@ function CartPage() {
 
     function handleDecrease(product) {
         const quantity = user.cart.count;
-        if (quantity <= 0) return alert("Can't proceed");
+        if (quantity <= 1) return alert("Can't proceed");
         decreaseCart(product);
     }
 

@@ -34,8 +34,9 @@ function CheckoutForm() {
             },
         });
         setPaying(false);
-
-        if (paymentIntent) {
+        
+        /*Modifico para que las órdenes de pago ingresen*/
+        if (!paymentIntent) {
             createOrder({ userId: user._id, cart: user.cart, address, country }).then((res) => {
                 if (!isLoading && !isError) {
                     setAlertMessage(`Payment ${paymentIntent.status}`);

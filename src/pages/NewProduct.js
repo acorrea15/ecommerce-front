@@ -43,8 +43,8 @@ function NewProduct() {
     function showWidget() {
         const widget = window.cloudinary.createUploadWidget(
             {
-                cloudName: "learn-code-10",
-                uploadPreset: "dcizdwph",
+                cloudName: "devuepcra",
+                uploadPreset: "beolcyyp",
             },
             (error, result) => {
                 if (!error && result.event === "success") {

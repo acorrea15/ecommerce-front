@@ -49,6 +49,7 @@ function Navigation() {
           </Navbar.Brand>
         <LinkContainer to="/">
 
+<<<<<<< HEAD
           <Navbar.Brand className="texto"> ECOMMERCE - 5I </Navbar.Brand>
         </LinkContainer>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -56,6 +57,10 @@ function Navigation() {
           <Nav.Link className="texto" href="#features">Sobre Nosotros</Nav.Link>
           <Nav.Link className="texto" href="#Sucursales">Sucursales</Nav.Link>
           <Nav.Link className="texto" href="#pricing">Contáctenos</Nav.Link>
+=======
+                <Nav.Link className="texto" href="#features">Sobre Nosotros</Nav.Link>
+                <Nav.Link href="#pricing">Sucursales</Nav.Link>
+>>>>>>> ce48ba837c4d103ab4a65839bb6ad0781ae9e574
 
           <NavDropdown className="texto" title="Categorías" id="collasible-nav-dropdown">
             <NavDropdown.Item href="http://localhost:3000/category/technology">Tecnología</NavDropdown.Item>
