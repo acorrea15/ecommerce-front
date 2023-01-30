@@ -49,7 +49,6 @@ function Navigation() {
           </Navbar.Brand>
         <LinkContainer to="/">
 
-
           <Navbar.Brand className="texto"> ECOMMERCE - 5I </Navbar.Brand>
         </LinkContainer>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
