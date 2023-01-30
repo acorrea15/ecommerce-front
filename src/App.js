@@ -15,9 +15,15 @@ import CartPage from "./pages/CartPage";
 import OrdersPage from "./pages/OrdersPage";
 import AdminDashboard from "./pages/AdminDashboard";
 import EditProductPage from "./pages/EditProductPage";
+import Footer from "./components/Footer"
 import { useEffect } from "react";
 import { io } from "socket.io-client";
 import { addNotification } from "./features/userSlice";
+import NotFound from "./pages/NotFound";
+
+// import Carrusel from "./components/Carrusel";
+
+
 /**/
 function App() {
     const user = useSelector((state) => state.user);
@@ -42,6 +48,8 @@ function App() {
             <BrowserRouter>
                 <ScrollToTop />
                 <Navigation />
+                {/* <Carrusel/> */}
+                
                 <Routes>
                     <Route index element={<Home />} />
                     {!user && (
@@ -70,8 +78,11 @@ function App() {
                     <Route path="/new-product" element={<NewProduct />} />
 
                     <Route path="*" element={<Home />} />
+                    <Route path="/notfound" element={<NotFound />} />      
                 </Routes>
-            </BrowserRouter>
+
+                <Footer/>
+          </BrowserRouter>
         </div>
     );
 }

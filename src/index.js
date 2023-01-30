@@ -3,25 +3,26 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-//setup store
+//Importación de la información que queda en el store: 
 import store from "./store";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import persistStore from "redux-persist/es/persistStore";
 
-// store to persit
+
+// Creación del store-persist: 
 const persistedStore = persistStore(store);
 
+// Función para que el usuario y los productos seleccionados persistan en el caso que refresquemos la página: 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <Provider store={store}>
         <PersistGate loading={<div>Loading...</div>} persistor={persistedStore}>
             <App />
+        
         </PersistGate>
     </Provider>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+
 reportWebVitals();
