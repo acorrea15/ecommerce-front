@@ -127,23 +127,7 @@ function Signup() {
                             value={confirmPassword} required onChange={(e) => setConfirmPassword(e.target.value)} />
                             <div className="text-danger" >{errors.confirmPassword?.message}</div>  
  
- {/*                    <Form style={{ width: "100%" }} onSubmit={handleSignup}>
-                        <h1 className="textotitulo">Crear cuenta</h1>
-                        {isError && <Alert variant="danger">{error.data}</Alert>}
-                        <Form.Group>
-                            <Form.Label className="texto">Nombre</Form.Label>
-                            <Form.Control type="text" placeholder="Tu nombre" value={name} required onChange={(e) => setName(e.target.value)} />
-                        </Form.Group>
 
-                        <Form.Group>
-                            <Form.Label className="texto">Email</Form.Label>
-                            <Form.Control type="email" placeholder="Email" value={email} required onChange={(e) => setEmail(e.target.value)} />
-                        </Form.Group>
-
-                        <Form.Group className="mb-3">
-                            <Form.Label className="texto">Password</Form.Label>
-                            <Form.Control type="password" placeholder="Password" value={password} required onChange={(e) => setPassword(e.target.value)} />
->>>>>>> restaurarContrasena */}
                         </Form.Group>
 
                         <Form.Group>

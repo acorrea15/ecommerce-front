@@ -49,18 +49,6 @@ function Navigation() {
           </Navbar.Brand>
         <LinkContainer to="/">
 
-<<<<<<< HEAD
-                <NavDropdown title="Categorías" id="collasible-nav-dropdown">
-                    <NavDropdown.Item href="/category/all">Electrodomésticos</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Computadoras y accesorios
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Moviliario de oficina</NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action/3.4">
-                        Otros productos
-                    </NavDropdown.Item>
-=======
-
           <Navbar.Brand className="texto"> ECOMMERCE - 5I </Navbar.Brand>
         </LinkContainer>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -149,7 +137,6 @@ function Navigation() {
                   >
                     Logout
                   </Button>
->>>>>>> restaurarContrasena
                 </NavDropdown>
               </>
             )}
