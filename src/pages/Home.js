@@ -37,8 +37,8 @@ function Home() {
                     ))}
                 </div>
                 <div>
-                    <Link to="/category/all" style={{ textAlign: "right", display: "block", textDecoration: "none" }}>
-                        ver más {">>"}
+                    <Link to="/category/todos" style={{ textAlign: "right", display: "block", textDecoration: "none" }}>
+                        Ver todos los productos {">>"}
                     </Link>
                 </div>
             </div>

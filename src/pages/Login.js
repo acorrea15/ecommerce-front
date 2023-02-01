@@ -21,12 +21,12 @@ function Login() {
                         {isError && <Alert variant="danger">{error.data}</Alert>}
                         <Form.Group>
                             <Form.Label className="texto">Email</Form.Label>
-                            <Form.Control type="email" placeholder="Correo electrónico" value={email} required onChange={(e) => setEmail(e.target.value)} />
+                            <Form.Control type="email" placeholder="Ingrese su email" value={email} maxlength="90" required onChange={(e) => setEmail(e.target.value)} />
                         </Form.Group>
 
-                        <Form.Group className="mb-3">
+                        <Form.Group className="my-3">
                             <Form.Label className="texto">Password</Form.Label>
-                            <Form.Control type="password" placeholder="Password" value={password} required onChange={(e) => setPassword(e.target.value)} />
+                            <Form.Control type="password" placeholder="Ingrese su contraseña" value={password}  maxlength="16" required onChange={(e) => setPassword(e.target.value)} />
                         </Form.Group>
 
                         <Form.Group>
@@ -36,9 +36,9 @@ function Login() {
                         </Form.Group>
 
                         <p className="pt-3 text-center texto">
-                            ¿No tienes cuenta? <Link to="/signup">Crear cuenta</Link>{" "}
+                            ¿No tiene cuenta? <Link to="/signup">Crear cuenta</Link>{" "}
                         </p>
-                        <p className="pt-3 text-center">
+                        <p className="pt-3 text-center texto">
                             ¿Olvidó su contraseña? <Link to="/restore">Restaurar contraseña</Link>{" "}
                         </p>
                     </Form>

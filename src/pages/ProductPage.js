@@ -51,8 +51,8 @@ function ProductPage() {
    
 
 
-    return (
-        <Container className="pt-4" style={{ position: "relative" }}>
+    return (        
+        <Container className="pt-4" style={{ position: "relative", minHeight: "75vh" }}>
             <Row>
                 <Col lg={6}>
                     <AliceCarousel mouseTracking items={images} controlsStrategy="alternate" />
@@ -86,7 +86,7 @@ function ProductPage() {
                             <Button size="lg">Editar producto</Button>
                         </LinkContainer>
                     )}
-                    {isSuccess && <ToastMessage bg="info" title="Added to cart" body={`${product.name} is in your cart`} />}
+                    {isSuccess && <ToastMessage bg="info" title="Añadido al carrito" body={`${product.name} está en tu carrito`} />}
                 </Col>
             </Row>
             <div className="my-4">

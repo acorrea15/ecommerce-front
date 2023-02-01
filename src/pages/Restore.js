@@ -48,10 +48,13 @@ function Restore() {
         console.log(response.data, "<<----- sendEmail!!!!!forgot-password!!!!!!");
         console.log(response.data.status, "<<<<----ES response.data.status!!!!!!!!!");
 
-        if (response.data.status == "El usuario no existe!!")
-            alert("El usuario no existe!!!!!")
-        else
-            alert("Se envió un mail a la casilla indicada para continuar con el proceso de restauración de conrtraseña.")    
+        if (response.data.status == "El usuario no existe!!"){
+            alert("El usuario no existe! Verifique el email ingresado.")
+        }
+        else{
+            alert("Se envió un mail a la casilla indicada para continuar con el proceso de restauración de la contraseña.")    
+            window.location.href = "http://localhost:3000/login";
+        }
       };
     
         
@@ -64,10 +67,10 @@ function Restore() {
                         <h1>Restaurar contraseña</h1>
                         
                         <Form.Group>
-                            <Form.Label>Email Address</Form.Label>
+                            <Form.Label className="texto">Dirección de mail</Form.Label>
                             <Form.Control 
                                 type="email" 
-                                placeholder="Enter email" 
+                                placeholder="Ingrese el email con el que se registró" 
                                 maxlength="30"
                                 {...register("email", { required: {value: true, 
                                     message: "El email es requerido"}, 
@@ -79,11 +82,11 @@ function Restore() {
                         </Form.Group>
 
                        {  <Form.Group>
-                            <Button className="mt-4"   type="submit"  >
+                            <Button className="mt-4 texto"   type="submit"  >
                                 Restaurar
                             </Button>
                         </Form.Group> }
-                        <p className="pt-3 text-center">
+                        <p className="pt-3 text-center texto">
                             ¿Ya tiene una cuenta? <Link to="/login">Login</Link>{" "}
                         </p>
                          

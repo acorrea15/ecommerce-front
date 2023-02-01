@@ -52,17 +52,17 @@ box-shadow: -2px 2px 1px -2px rgba(78, 77, 77, 0.75);
 }
 
 .notifications-container {
-    padding: 20px;
+    padding: 5px;
     max-height: 200px;
     overflow-y: scroll;
     border: 1px solid gray;
-    background-color: #77dd77;
-    width: 200px;
+    background-color: #e4e3e3;
+    width: 300px;
     z-index: 99;
 }
 
 .notification-read {
-    background-color: lightblue;
+    background-color: rgb(187, 227, 209);
 }
 
 .notification-unread {

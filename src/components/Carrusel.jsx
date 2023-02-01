@@ -2,7 +2,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import imagen1 from '../imágenes/carrusel1.jpg'
 import imagen2 from '../imágenes/carrusel2.jpg'
 import imagen3 from '../imágenes/carrusel3.jpg'
-
+import "./Carrusel.css"
 
 function Carrusel() {
   return (
@@ -13,8 +13,7 @@ function Carrusel() {
           src={imagen1}
           alt="First slide"
         />
-        <Carousel.Caption>
-         
+        <Carousel.Caption className='p_box_shadow'>         
           <p>Accesorios a tu medida</p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -25,9 +24,9 @@ function Carrusel() {
           alt="Second slide"
         />
 
-        <Carousel.Caption>
+        <Carousel.Caption className='p_box_shadow'>
           
-          <p>Envíos gratis miércoles y viernes</p>
+          <p>Envíos gratis</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -37,10 +36,9 @@ function Carrusel() {
           alt="Third slide"
         />
 
-        <Carousel.Caption>
-          
+        <Carousel.Caption className='p_box_shadow'>          
           <p>
-            Asesoramiento técnico en todos nuestros productos
+            Asesoramiento técnico
           </p>
         </Carousel.Caption>
       </Carousel.Item>

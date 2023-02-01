@@ -55,13 +55,13 @@ function CheckoutForm() {
                     {alertMessage && <Alert>{alertMessage}</Alert>}
                     <Col md={6}>
                         <Form.Group className="mb-3">
-                            <Form.Label>First Name</Form.Label>
-                            <Form.Control type="text" placeholder="First Name" value={user.name} disabled />
+                            <Form.Label>Nombre y apellido</Form.Label>
+                            <Form.Control type="text" placeholder="Nombre como figura en la tarjeta" value={user.name} disabled />
                         </Form.Group>
                     </Col>
                     <Col md={6}>
                         <Form.Group className="mb-3">
-                            <Form.Label>Email</Form.Label>
+                            <Form.Label>email</Form.Label>
                             <Form.Control type="text" placeholder="Email" value={user.email} disabled />
                         </Form.Group>
                     </Col>
@@ -69,21 +69,21 @@ function CheckoutForm() {
                 <Row>
                     <Col md={7}>
                         <Form.Group className="mb-3">
-                            <Form.Label>Address</Form.Label>
-                            <Form.Control type="text" placeholder="Address" value={address} onChange={(e) => setAddress(e.target.value)} required />
+                            <Form.Label>Dirección</Form.Label>
+                            <Form.Control type="text" placeholder="Dirección de facturación" value={address} onChange={(e) => setAddress(e.target.value)} required />
                         </Form.Group>
                     </Col>
                     <Col md={5}>
                         <Form.Group className="mb-3">
-                            <Form.Label>Country</Form.Label>
-                            <Form.Control type="text" placeholder="Country" value={country} onChange={(e) => setCountry(e.target.value)} required />
+                            <Form.Label>País</Form.Label>
+                            <Form.Control type="text" placeholder="País de residencia" value={country} onChange={(e) => setCountry(e.target.value)} required />
                         </Form.Group>
                     </Col>
                 </Row>
-                <label htmlFor="card-element">Card</label>
+                <label htmlFor="card-element" className="mt-3 h5">Datos de la tarjeta</label>
                 <CardElement id="card-element" />
                 <Button className="mt-3" type="submit" disabled={user.cart.count <= 0 || paying || isSuccess}>
-                    {paying ? "Processing..." : "Pay"}
+                    {paying ? "Procesando..." : "Pagar"}
                 </Button>
             </Form>
         </Col>

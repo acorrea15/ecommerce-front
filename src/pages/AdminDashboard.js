@@ -11,13 +11,13 @@ function AdminDashboard() {
                     <Col sm={3}>
                         <Nav variant="pills" className="flex-column">
                             <Nav.Item>
-                                <Nav.Link eventKey="products">Products</Nav.Link>
+                                <Nav.Link eventKey="products">Productos</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link eventKey="orders">Orders</Nav.Link>
+                                <Nav.Link eventKey="orders">Pedidos</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link eventKey="clients">Clients</Nav.Link>
+                                <Nav.Link eventKey="clients">Clientes</Nav.Link>
                             </Nav.Item>
                         </Nav>
                     </Col>

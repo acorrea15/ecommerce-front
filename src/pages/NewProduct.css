@@ -36,4 +36,11 @@
     background-size: cover;
     background-position: center;
     height: 100vh;
+    border-radius: 3%; 
+}
+
+@media screen and (max-width: 756px) {
+    .new-product__image--container {
+        display: none;
+    }
 }

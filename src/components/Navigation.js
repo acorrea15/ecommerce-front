@@ -52,17 +52,17 @@ function Navigation() {
         </LinkContainer>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav.Link className="texto" href="#features">Sobre Nosotros</Nav.Link>
+          <Nav.Link className="texto" href="/notfound">Sobre Nosotros</Nav.Link>
           <Nav.Link className="texto" href="/notfound">Sucursales</Nav.Link>
-          <Nav.Link className="texto" href="#pricing">Contáctenos</Nav.Link>
+          <Nav.Link className="texto" href="/notfound">Contáctenos</Nav.Link>
 
           <NavDropdown className="texto" title="Categorías" id="collasible-nav-dropdown">
-            <NavDropdown.Item className="texto" href="/category/technology">Tecnología</NavDropdown.Item>
-            <NavDropdown.Item className="texto" href="/category/phones">Teléfonos</NavDropdown.Item>
-            <NavDropdown.Item className="texto" href="/category/laptops">Laptops</NavDropdown.Item>
+            <NavDropdown.Item className="texto" href="/category/accesorios">Accesorios</NavDropdown.Item>
+            <NavDropdown.Item className="texto" href="/category/tablets">Tablets</NavDropdown.Item>
+            <NavDropdown.Item className="texto" href="/category/celulares">Celulares</NavDropdown.Item>
             <NavDropdown.Item className="texto" href="/category/notebooks">Notebooks</NavDropdown.Item>
             <NavDropdown.Divider />
-            <NavDropdown.Item className="texto" href="#action/3.4">
+            <NavDropdown.Item className="texto" href="/notfound">
               Otros productos
             </NavDropdown.Item>
           </NavDropdown>

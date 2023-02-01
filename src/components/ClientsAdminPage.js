@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Table, Button, Badge } from "react-bootstrap";
+import { Table, Button, Badge, Container } from "react-bootstrap";
 import axios from "../axios";
 import Loading from "./Loading";
 function ClientsAdminPage() {
@@ -61,34 +61,36 @@ function ClientsAdminPage() {
 
 
     return (
-        <Table responsive striped bordered hover>
-            <thead>
-                <tr>
-                    <th>Client Id</th>
-                    <th>Client Name</th>
-                    <th>Email</th>
-                    <th>Estado</th>
-                </tr>
-            </thead>
-            <tbody>
-                {users.map((user) => (
+        <Container style={{ minHeight: "75vh" }}> 
+            <Table responsive striped bordered hover>
+                <thead>
                     <tr>
-                        <td>{user._id}</td>
-                        <td>{user.name}</td>
-                        <td>{user.email}</td>
-                        <td>
-                            {user.isEnabled === true ? (                                 
-                                <Button className="btn-success" size="sm" onClick={() => markDisable(user._id)}>
-                                    Habilitado - Presione para Inhabilitar
-                                </Button>
-                            ) : (
-                                <Badge bg="danger">¡Inhabilitado!</Badge>
-                            )}
-                        </td>
+                        <th>ID del Cliente</th>
+                        <th>Nombre del Cliente</th>
+                        <th>Email del cliente</th>
+                        <th>Estado</th>
                     </tr>
-                ))}
-            </tbody>
-        </Table>
+                </thead>
+                <tbody>
+                    {users.map((user) => (
+                        <tr>
+                            <td>{user._id}</td>
+                            <td>{user.name}</td>
+                            <td>{user.email}</td>
+                            <td>
+                                {user.isEnabled === true ? (                                 
+                                    <Button className="btn-success" size="sm" onClick={() => markDisable(user._id)}>
+                                        Habilitado - Click para Inhabilitar
+                                    </Button>
+                                ) : (
+                                    <Badge bg="danger">¡Inhabilitado!</Badge>
+                                )}
+                            </td>
+                        </tr>
+                    ))}
+                </tbody>
+            </Table>
+        </Container>
     );
 
     return <div>ClientsAdminPage</div>;

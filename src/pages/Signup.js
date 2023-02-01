@@ -55,13 +55,14 @@ function Signup() {
                 <Col md={6} className="signup__form--container">
  
                     <Form style={{ width: "100%" }} onSubmit={handleSubmit(onSubmit)}>
-                        <h1>Crear una cuenta</h1>
+                        <h1 className="mt-5">Crear una cuenta</h1>
                         {isError && <Alert variant="danger">{error.data}</Alert>}
                         <Form.Group>
-                            <Form.Label className="mt-1">Nombre</Form.Label>
+                            <Form.Label className="mt-1 texto">Nombre</Form.Label>
                             <Form.Control 
                                 type="text" 
-                                placeholder="Ingrese su nombre"
+                                placeholder="Ingrese su nombre completo"
+                                maxlength="30"
                                 {...register("nombre", {  required: {value: true, 
                                     message: "El nombre es requerido"}, 
                                     minLength: {value: 2,
@@ -78,12 +79,12 @@ function Signup() {
 
                         </Form.Group>
 
-                        <Form.Group className="mb-3 mt-3">
+                        <Form.Group className="mb-3 mt-3 texto">
                             <Form.Label>Dirección de email</Form.Label>
                             <Form.Control 
                                 type="email" 
                                 placeholder="Ingrese su email" 
-                                maxlength="30"
+                                maxlength="90"
                                 {...register("email", { required: {value: true, 
                                     message: "El email es requerido"}, 
                                     pattern:{value: /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/i ,
@@ -93,11 +94,12 @@ function Signup() {
                                 <div className="text-danger" >{errors.email?.message}</div>  
                         </Form.Group>
 
-                        <Form.Group className="mb-3 mt-3">
+                        <Form.Group className="mb-3 mt-3 texto">
                             <Form.Label>Password</Form.Label>
                             <Form.Control 
                             type="password" 
-                            placeholder="Enter Password" 
+                            placeholder="Ingrese su contraseña" 
+                            maxlength="16"
                             {...register("password", { required: {value: true, 
                                 message: "La contraseña es requerida"}, 
                                 minLength: {value: 8,
@@ -111,11 +113,12 @@ function Signup() {
                             <div className="text-danger" >{errors.password?.message}</div>
                         </Form.Group>
 
-                        <Form.Group className="mb-3 mt-3">
+                        <Form.Group className="mb-3 mt-3 texto">
                             <Form.Label>Confirme el Password</Form.Label>
                             <Form.Control 
                             type="password" 
-                            placeholder="Re-Enter Password" 
+                            placeholder="Reingrese su contraseña" 
+                            maxlength="16"
                             {...register("confirmPassword", { required: {value: true, 
                                 message: "La confirmación de la contraseña es requerida"}, 
                                 minLength: {value: 8,
@@ -137,7 +140,7 @@ function Signup() {
                             </Button>
                         </Form.Group>
  
-                        <p className="pt-3 text-center">
+                        <p className="pt-3 text-center texto">
                             ¿Ya tiene una cuenta? <Link to="/login">Login</Link>{" "}
                         </p>                        
 
