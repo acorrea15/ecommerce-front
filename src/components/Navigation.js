@@ -166,7 +166,7 @@ function Navigation() {
             </p>
           ))
         ) : (
-          <p>todavía no hay notificaciones</p>
+          <p>Todavía no hay notificaciones</p>
         )}
       </div>
     </Navbar>
