@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { LinkContainer } from "react-router-bootstrap";
 import { logout, resetNotifications } from "../features/userSlice";
 import "./Navigation.css";
-import logo from '../imágenes/logodefinitivo.jpg'
+import logo from '../imágenes/logodefinitivo.png'
 
 function Navigation() {
   const user = useSelector((state) => state.user);
@@ -36,20 +36,19 @@ function Navigation() {
   }
 
   return (
-    <Navbar expand="lg">
-      <Container className="containergeneral ">
+    <Navbar expand="lg" className="containergeneral ">
+      <Container >
           <Navbar.Brand href="#home">
             <img
               src= {logo}
-              width="100"
-              height="35"
+              width="65"
+              height="65"
               className="d-inline-block align-top"
               alt="React Bootstrap logo"
             />
           </Navbar.Brand>
         <LinkContainer to="/">
-
-          <Navbar.Brand className="texto"> ECOMMERCE - 5I </Navbar.Brand>
+          <Navbar.Brand className="texto2"> ecommerce-5i </Navbar.Brand>
         </LinkContainer>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -58,12 +57,12 @@ function Navigation() {
           <Nav.Link className="texto" href="#pricing">Contáctenos</Nav.Link>
 
           <NavDropdown className="texto" title="Categorías" id="collasible-nav-dropdown">
-            <NavDropdown.Item href="/category/technology">Tecnología</NavDropdown.Item>
-            <NavDropdown.Item href="/category/technology">Teléfonos</NavDropdown.Item>
-            <NavDropdown.Item href="/category/technology">Laptops</NavDropdown.Item>
-            <NavDropdown.Item href="/category/technology">Notebooks</NavDropdown.Item>
+            <NavDropdown.Item className="texto" href="/category/technology">Tecnología</NavDropdown.Item>
+            <NavDropdown.Item className="texto" href="/category/phones">Teléfonos</NavDropdown.Item>
+            <NavDropdown.Item className="texto" href="/category/laptops">Laptops</NavDropdown.Item>
+            <NavDropdown.Item className="texto" href="/category/notebooks">Notebooks</NavDropdown.Item>
             <NavDropdown.Divider />
-            <NavDropdown.Item href="#action/3.4">
+            <NavDropdown.Item className="texto" href="#action/3.4">
               Otros productos
             </NavDropdown.Item>
           </NavDropdown>
@@ -72,7 +71,7 @@ function Navigation() {
             {/* si no hay un usuario registrado mostrar el botón login */}
             {!user && (
               <LinkContainer  to="/login">
-                <Nav.Link className="text-primary login">Login</Nav.Link>
+                <Nav.Link className="text-primary login"> <button type="button" class="btn btn-outline-primary">Ingresá</button> </Nav.Link>
               </LinkContainer>
             )}
 
@@ -135,7 +134,7 @@ function Navigation() {
                     onClick={handleLogout}
                     className="logout-btn"
                   >
-                    Logout
+                    Salir
                   </Button>
                 </NavDropdown>
               </>

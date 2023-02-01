@@ -5,15 +5,21 @@
 }
 .texto{
     font-size: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'Sans-Serif';
 }
 
+.texto2{
+    font-size: 23px;
+    color: rgb(23, 21, 38);
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'Sans-Serif';
+}
 
 .containergeneral{
-    background-color: #f0fc4d;
+    background-color: #fff159;
     -webkit-box-shadow: -9px 10px 5px -8px rgba(0,0,0,0.75);
 -moz-box-shadow: -9px 10px 5px -8px rgba(0,0,0,0.75);
-box-shadow: -9px 10px 5px -8px rgba(0,0,0,0.75);
+box-shadow: -2px 2px 1px -2px rgba(78, 77, 77, 0.75);
 
 
 }

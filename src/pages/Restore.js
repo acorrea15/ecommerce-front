@@ -68,6 +68,7 @@ function Restore() {
                             <Form.Control 
                                 type="email" 
                                 placeholder="Enter email" 
+                                maxlength="30"
                                 {...register("email", { required: {value: true, 
                                     message: "El email es requerido"}, 
                                     pattern:{value: /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/i ,

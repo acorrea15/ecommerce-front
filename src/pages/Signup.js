@@ -55,13 +55,13 @@ function Signup() {
                 <Col md={6} className="signup__form--container">
  
                     <Form style={{ width: "100%" }} onSubmit={handleSubmit(onSubmit)}>
-                        <h1>Create an account</h1>
+                        <h1>Crear una cuenta</h1>
                         {isError && <Alert variant="danger">{error.data}</Alert>}
                         <Form.Group>
-                            <Form.Label>Name</Form.Label>
+                            <Form.Label className="mt-1">Nombre</Form.Label>
                             <Form.Control 
                                 type="text" 
-                                placeholder="Your name"
+                                placeholder="Ingrese su nombre"
                                 {...register("nombre", {  required: {value: true, 
                                     message: "El nombre es requerido"}, 
                                     minLength: {value: 2,
@@ -78,11 +78,12 @@ function Signup() {
 
                         </Form.Group>
 
-                        <Form.Group>
-                            <Form.Label>Email Address</Form.Label>
+                        <Form.Group className="mb-3 mt-3">
+                            <Form.Label>Dirección de email</Form.Label>
                             <Form.Control 
                                 type="email" 
-                                placeholder="Enter email" 
+                                placeholder="Ingrese su email" 
+                                maxlength="30"
                                 {...register("email", { required: {value: true, 
                                     message: "El email es requerido"}, 
                                     pattern:{value: /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/i ,
@@ -103,14 +104,14 @@ function Signup() {
                                             message: "La contraseña debe tener al menos 8 caracteres"},
                                 maxLength: {value: 64,
                                             message: "La contraseña debe tener como máximo 64 caracteres"},            
-                                pattern:{value: /(?=(.*[0-9]))(?=.*[\!@#$%^&*()\\[\]{}\-_+=|:;"'<>,./?])(?=.*[a-z])(?=(.*[A-Z]))(?=(.*)).{8,}/i ,
-                                        message: "La contraseña debe tener una letra minúscula, una letra mayúscula, un número, un carácter especial y mínimo 8 dígitos."}            
+                                pattern:{value: /(?=(.*[0-9]))(?=.*[\!@#$%^&*()\\[\]{}\-_+=|:;"'<>,./?])(?=.*[a-z])(?=(.*[A-Z]))(?=(.*)).{8,16}/i ,
+                                        message: "La contraseña debe tener una letra minúscula, una letra mayúscula, un número, un carácter especial y entre 8 y 16 caracteres."}            
                                 })}
                             value={password} required onChange={(e) => setPassword(e.target.value)} />
                             <div className="text-danger" >{errors.password?.message}</div>
                         </Form.Group>
 
-                        <Form.Group className="mb-3">
+                        <Form.Group className="mb-3 mt-3">
                             <Form.Label>Confirme el Password</Form.Label>
                             <Form.Control 
                             type="password" 
@@ -121,8 +122,8 @@ function Signup() {
                                             message: "La contraseña debe tener al menos 8 caracteres"},
                                 maxLength: {value: 64,
                                                 message: "La contraseña debe tener como máximo 64 caracteres"},            
-                                pattern:{value: /(?=(.*[0-9]))(?=.*[\!@#$%^&*()\\[\]{}\-_+=|:;"'<>,./?])(?=.*[a-z])(?=(.*[A-Z]))(?=(.*)).{8,}/i ,
-                                            message: "La contraseña debe tener una letra minúscula, una letra mayúscula, un número, un carácter especial y mínimo 8 dígitos."}            
+                                pattern:{value: /(?=(.*[0-9]))(?=.*[\!@#$%^&*()\\[\]{}\-_+=|:;"'<>,./?])(?=.*[a-z])(?=(.*[A-Z]))(?=(.*)).{8,16}/i ,
+                                            message: "La contraseña debe tener una letra minúscula, una letra mayúscula, un número, un carácter especial y entre 8 y 16 caracteres."}            
                                 })} 
                             value={confirmPassword} required onChange={(e) => setConfirmPassword(e.target.value)} />
                             <div className="text-danger" >{errors.confirmPassword?.message}</div>  
@@ -130,7 +131,7 @@ function Signup() {
 
                         </Form.Group>
 
-                        <Form.Group>
+                        <Form.Group className="mb-3 mt-2">
                             <Button className="texto" type="submit" disabled={isLoading}>
                                 Crear cuenta
                             </Button>
