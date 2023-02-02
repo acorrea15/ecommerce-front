@@ -29,7 +29,7 @@ function DashboardProducts() {
                     <Button variant="danger" onClick={() => handleDeleteProduct(_id, user._id)} disabled={isLoading}>
                         Eliminar
                     </Button>
-                    <Link to={`/product/${_id}/edit`} className="mx-1 btn btn-warning">
+                    <Link to={`/product/${_id}/edit`} className="mx-1 mt-1 btn btn-warning">
                         Editar
                     </Link>
                 </td>
