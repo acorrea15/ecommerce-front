@@ -40,9 +40,9 @@ function Restore() {
           email,
         };
     
-        const response = await axios.post(
-        /*"http://localhost:8080/api/sendemail", */
-          "http://localhost:8080/forgot-password",
+        const response = await axios.post(          
+          /* "http://localhost:808 0/forgot-password", */
+          "https://ecommerce-back-production.up.railway.app/forgot-password",
           data
         );
         console.log(response.data, "<<----- sendEmail!!!!!forgot-password!!!!!!");
