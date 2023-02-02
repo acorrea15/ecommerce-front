@@ -39,13 +39,15 @@ function Navigation() {
     <Navbar expand="lg" className="containergeneral ">
       <Container >
           <Navbar.Brand href="#home">
-            <img
-              src= {logo}
-              width="65"
-              height="65"
-              className="d-inline-block align-top"
-              alt="React Bootstrap logo"
-            />
+            <LinkContainer to="/">
+              <img
+                src= {logo}
+                width="65"
+                height="65"
+                className="d-inline-block align-top"
+                alt="React Bootstrap logo"
+              />
+            </LinkContainer>
           </Navbar.Brand>
         <LinkContainer to="/">
           <Navbar.Brand className="texto2"> ecommerce-5i </Navbar.Brand>
