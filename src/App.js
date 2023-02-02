@@ -66,7 +66,7 @@ function App() {
                             <Route path="/orders" element={<OrdersPage />} />
                         </>
                     )}
-                    {user && user.isAdmin && (
+                    {user && user.isAdmin && ( 
                         <>
                             <Route path="/admin" element={<AdminDashboard />} />
                             <Route path="/product/:id/edit" element={<EditProductPage />} />
