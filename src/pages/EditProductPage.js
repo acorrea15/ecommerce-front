@@ -121,7 +121,7 @@ function EditProductPage() {
                         </Form.Group>
 
                         <Form.Group>
-                            <Button type="submit" disabled={isLoading || isSuccess}>
+                            <Button className="mb-5" type="submit" disabled={isLoading || isSuccess}>
                                 Actualizar Producto
                             </Button>
                         </Form.Group>
