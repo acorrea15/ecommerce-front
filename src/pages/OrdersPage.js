@@ -29,7 +29,10 @@ function OrdersPage() {
     }
 
     if (orders.length === 0) {
-        return <h1 className="text-center pt-3">Sin pedidos todavía</h1>;
+        return (
+            <Container style={{ minHeight: "75vh" }} >
+                <h1 className="text-center pt-3">Sin pedidos todavía</h1>;
+            </Container>)
     }
 
     return (
