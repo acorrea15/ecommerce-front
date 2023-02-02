@@ -38,20 +38,22 @@ function Navigation() {
   return (
     <Navbar expand="lg" className="containergeneral ">
       <Container >
-          <Navbar.Brand href="#home">
-            <LinkContainer to="/">
-              <img
-                src= {logo}
-                width="65"
-                height="65"
-                className="d-inline-block align-top"
-                alt="React Bootstrap logo"
-              />
-            </LinkContainer>
+        <LinkContainer to="/">
+          <Navbar.Brand>
+            <img
+              src= {logo}
+              width="65"
+              height="65"
+              className="d-inline-block align-top"
+              alt="React Bootstrap logo"
+            />
           </Navbar.Brand>
+        </LinkContainer>
+
         <LinkContainer to="/">
           <Navbar.Brand className="texto2"> ecommerce-5i </Navbar.Brand>
         </LinkContainer>
+        
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav.Link className="texto" href="/notfound">Sobre Nosotros</Nav.Link>
