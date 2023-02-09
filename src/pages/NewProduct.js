@@ -29,7 +29,7 @@ function NewProduct() {
     function handleSubmit(e) {
         e.preventDefault();
         if (!name || !description || !price || !category || !images.length) {
-            return alert("Please fill out all the fields");
+            return alert("Por favor complete todos los campos");
         }
         createProduct({ name, description, price, category, images }).then(({ data }) => {
             if (data.length > 0) {
@@ -60,40 +60,40 @@ function NewProduct() {
             <Row>
                 <Col md={6} className="new-product__form--container">
                     <Form style={{ width: "100%" }} onSubmit={handleSubmit}>
-                        <h1 className="mt-4">Create a product</h1>
-                        {isSuccess && <Alert variant="success">Product created with succcess</Alert>}
+                        <h1 className="mt-4">Crear producto</h1>
+                        {isSuccess && <Alert variant="success">Producto creado de forma exitorsa</Alert>}
                         {isError && <Alert variant="danger">{error.data}</Alert>}
                         <Form.Group className="mb-3">
-                            <Form.Label>Product name</Form.Label>
-                            <Form.Control type="text" placeholder="Enter product name" value={name} required onChange={(e) => setName(e.target.value)} />
+                            <Form.Label>Nombre del Producto</Form.Label>
+                            <Form.Control type="text" placeholder="Ingrese el nombre del producto" value={name} maxlength="40" required onChange={(e) => setName(e.target.value)} />
                         </Form.Group>
 
                         <Form.Group className="mb-3">
-                            <Form.Label>Product description</Form.Label>
-                            <Form.Control as="textarea" placeholder="Product description" style={{ height: "100px" }} value={description} required onChange={(e) => setDescription(e.target.value)} />
+                            <Form.Label>Descripción del Producto</Form.Label>
+                            <Form.Control as="textarea" placeholder="Ingrese la descripción en detalle del Producto" style={{ height: "100px" }} value={description} maxlength="300" required onChange={(e) => setDescription(e.target.value)} />
                         </Form.Group>
 
                         <Form.Group className="mb-3">
-                            <Form.Label>Price($)</Form.Label>
-                            <Form.Control type="number" placeholder="Price ($)" value={price} required onChange={(e) => setPrice(e.target.value)} />
+                            <Form.Label>Precio del Producto ($)</Form.Label>
+                            <Form.Control type="number" placeholder="Ingrese el Precio del Producto" value={price}  required onChange={(e) => setPrice(e.target.value)} />
                         </Form.Group>
 
                         <Form.Group className="mb-3" onChange={(e) => setCategory(e.target.value)}>
-                            <Form.Label>Category</Form.Label>
+                            <Form.Label>Categoría del Producto</Form.Label>
                             <Form.Select>
                                 <option disabled selected>
-                                    -- Select One --
+                                    -- Seleecionar --
                                 </option>
-                                <option value="technology">technology</option>
-                                <option value="tablets">tablets</option>
-                                <option value="phones">phones</option>
-                                <option value="laptops">laptops</option>
+                                <option value="accesorios">Accesorios</option>
+                                <option value="tablets">Tablets</option>
+                                <option value="celulares">Celulares</option>
+                                <option value="notebooks">Notebooks</option>
                             </Form.Select>
                         </Form.Group>
 
-                        <Form.Group className="mb-3">
-                            <Button type="button" onClick={showWidget}>
-                                Upload Images
+                        <Form.Group className="mb-1">
+                            <Button variant="outline-info" type="button" className="mt-2" onClick={showWidget}>
+                                Subir imágenes
                             </Button>
                             <div className="images-preview-container">
                                 {images.map((image) => (
@@ -106,8 +106,8 @@ function NewProduct() {
                         </Form.Group>
 
                         <Form.Group>
-                            <Button type="submit" disabled={isLoading || isSuccess}>
-                                Create Product
+                            <Button className="mb-5" type="submit" disabled={isLoading || isSuccess}>
+                                Crear producto
                             </Button>
                         </Form.Group>
                     </Form>

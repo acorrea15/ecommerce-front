@@ -20,17 +20,17 @@ function CartPage() {
 
     function handleDecrease(product) {
         const quantity = user.cart.count;
-        if (quantity <= 0) return alert("Can't proceed");
+        if (quantity <= 1) return alert("Can't proceed");
         decreaseCart(product);
     }
 
     return (
-        <Container style={{ minHeight: "95vh" }} className="cart-container">
+        <Container style={{ minHeight: "75vh" }} className="cart-container">
             <Row>
                 <Col>
-                    <h1 className="pt-2 h3">Shopping cart</h1>
+                    <h1 className="pt-2 h3">Carrito de compras</h1>
                     {cart.length == 0 ? (
-                        <Alert variant="info">Shopping cart is empty. Add products to your cart</Alert>
+                        <Alert variant="info">El Carrito de Compras está Vacío. Agrega productos a tu carrito.</Alert>
                     ) : (
                         <Elements stripe={stripePromise}>
                             <CheckoutForm />
@@ -44,9 +44,9 @@ function CartPage() {
                                 <thead>
                                     <tr>
                                         <th>&nbsp;</th>
-                                        <th>Product</th>
-                                        <th>Price</th>
-                                        <th>Quantity</th>
+                                        <th>Producto</th>
+                                        <th>Precio</th>
+                                        <th>Cantidad</th>
                                         <th>Subtotal</th>
                                     </tr>
                                 </thead>

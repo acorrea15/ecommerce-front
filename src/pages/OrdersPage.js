@@ -29,18 +29,22 @@ function OrdersPage() {
     }
 
     if (orders.length === 0) {
-        return <h1 className="text-center pt-3">No orders yet</h1>;
+        return (
+            <Container style={{ minHeight: "75vh" }} >
+                <h1 className="text-center pt-3">Sin pedidos todavía</h1>;
+            </Container>)
     }
 
     return (
-        <Container>
-            <h1 className="text-center">Your orders</h1>
+        
+        <Container style={{ minHeight: "75vh" }} >
+            <h1 className="text-center">Tus pedidos</h1>
             <Table responsive striped bordered hover>
                 <thead>
                     <tr>
-                        <th>#</th>
-                        <th>Status</th>
-                        <th>Date</th>
+                        <th>ID Pedido</th>
+                        <th>Estado del Pedido</th>
+                        <th>Fecha</th>
                         <th>Total</th>
                     </tr>
                 </thead>
@@ -49,7 +53,7 @@ function OrdersPage() {
                         <tr>
                             <td>{order._id}</td>
                             <td>
-                                <Badge bg={`${order.status == "processing" ? "warning" : "success"}`} text="white">
+                                <Badge bg={`${order.status == "procesando" ? "warning" : "success"}`} text="white">
                                     {order.status}
                                 </Badge>
                             </td>

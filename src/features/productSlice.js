@@ -3,8 +3,10 @@ import { createSlice } from "@reduxjs/toolkit";
 // appApi
 import appApi from "../services/appApi";
 
+// Estado inicial de los productos: 
 const initialState = [];
 
+// función para cambio de estado de los productos: 
 export const productSlice = createSlice({
     name: "products",
     initialState,

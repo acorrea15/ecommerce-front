@@ -18,6 +18,7 @@ function ProductPage() {
     const [product, setProduct] = useState(null);
     const [similar, setSimilar] = useState(null);
     const [addToCart, { isSuccess }] = useAddToCartMutation();
+    const [cant, setCant] = useState(1);
 
     const handleDragStart = (e) => e.preventDefault();
     useEffect(() => {
@@ -46,9 +47,12 @@ function ProductPage() {
             </div>
         ));
     }
+ 
+   
 
-    return (
-        <Container className="pt-4" style={{ position: "relative" }}>
+
+    return (        
+        <Container className="pt-4" style={{ position: "relative", minHeight: "75vh" }}>
             <Row>
                 <Col lg={6}>
                     <AliceCarousel mouseTracking items={images} controlsStrategy="alternate" />
@@ -60,32 +64,33 @@ function ProductPage() {
                     </p>
                     <p className="product__price">${product.price}</p>
                     <p style={{ textAlign: "justify" }} className="py-3">
-                        <strong>Description:</strong> {product.description}
+                        <strong>Descripción:</strong> {product.description}
                     </p>
                     {user && !user.isAdmin && (
                         <ButtonGroup style={{ width: "90%" }}>
-                            <Form.Select size="lg" style={{ width: "40%", borderRadius: "0" }}>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
+                            <Form.Select size="lg" style={{ width: "40%", borderRadius: "0" }} onChange={e => setCant(parseInt(e.target.value))}>
+                                <option value="1" >1</option>
+                                <option value="2" >2</option>
+                                <option value="3" >3</option>
+                                <option value="4" >4</option>
+                                <option value="5" >5</option>
+                                <option value="6" >6</option>
                             </Form.Select>
-                            <Button size="lg" onClick={() => addToCart({ userId: user._id, productId: id, price: product.price, image: product.pictures[0].url })}>
-                                Add to cart
+                            <Button size="lg" onClick={() => addToCart({ userId: user._id, productId: id, price: product.price, image: product.pictures[0].url, cant: cant })}>
+                                Agregar al carrito
                             </Button>
                         </ButtonGroup>
                     )}
                     {user && user.isAdmin && (
                         <LinkContainer to={`/product/${product._id}/edit`}>
-                            <Button size="lg">Edit Product</Button>
+                            <Button size="lg">Editar producto</Button>
                         </LinkContainer>
                     )}
-                    {isSuccess && <ToastMessage bg="info" title="Added to cart" body={`${product.name} is in your cart`} />}
+                    {isSuccess && <ToastMessage bg="info" title="Añadido al carrito" body={`${product.name} está en tu carrito`} />}
                 </Col>
             </Row>
             <div className="my-4">
-                <h2>Similar Products</h2>
+                <h2>Productos similares</h2>
                 <div className="d-flex justify-content-center align-items-center flex-wrap">
                     <AliceCarousel mouseTracking items={similarProducts} responsive={responsive} controlsStrategy="alternate" />
                 </div>

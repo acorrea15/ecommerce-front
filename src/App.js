@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import Restore from "./pages/Restore";
 import Signup from "./pages/Signup";
 import { useDispatch, useSelector } from "react-redux";
 import NewProduct from "./pages/NewProduct";
@@ -14,15 +15,22 @@ import CartPage from "./pages/CartPage";
 import OrdersPage from "./pages/OrdersPage";
 import AdminDashboard from "./pages/AdminDashboard";
 import EditProductPage from "./pages/EditProductPage";
+import Footer from "./components/Footer"
 import { useEffect } from "react";
 import { io } from "socket.io-client";
 import { addNotification } from "./features/userSlice";
+import NotFound from "./pages/NotFound";
 
+// import Carrusel from "./components/Carrusel";
+
+
+/**/
 function App() {
     const user = useSelector((state) => state.user);
     const dispatch = useDispatch();
     useEffect(() => {
         const socket = io("ws://localhost:8080");
+        // const socket = io("ws:https://ecommerce-back-production.up.railway.app/");
         socket.off("notification").on("notification", (msgObj, user_id) => {
             // logic for notification
             if (user_id === user._id) {
@@ -41,12 +49,15 @@ function App() {
             <BrowserRouter>
                 <ScrollToTop />
                 <Navigation />
+                {/* <Carrusel/> */}
+                
                 <Routes>
                     <Route index element={<Home />} />
                     {!user && (
                         <>
                             <Route path="/login" element={<Login />} />
-                            <Route path="/signup" element={<Signup />} />
+                            <Route path="/signup" element={<Signup />} /> 
+                            <Route path="/restore" element={<Restore />} /> 
                         </>
                     )}
 
@@ -68,8 +79,11 @@ function App() {
                     <Route path="/new-product" element={<NewProduct />} />
 
                     <Route path="*" element={<Home />} />
+                    <Route path="/notfound" element={<NotFound />} />      
                 </Routes>
-            </BrowserRouter>
+
+                <Footer/>
+          </BrowserRouter>
         </div>
     );
 }

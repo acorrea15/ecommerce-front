@@ -8,6 +8,8 @@ const initialState = null;
 export const userSlice = createSlice({
     name: "products",
     initialState,
+
+    // Reductor con función de logout para el usuario
     reducers: {
         logout: () => initialState,
         addNotification: (state, action) => {

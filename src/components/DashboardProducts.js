@@ -1,5 +1,5 @@
 import React from "react";
-import { Table, Button } from "react-bootstrap";
+import { Table, Button, Container } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { useDeleteProductMutation } from "../services/appApi";
@@ -13,7 +13,7 @@ function DashboardProducts() {
     const [deletProduct, { isLoading, isSuccess }] = useDeleteProductMutation();
     function handleDeleteProduct(id) {
         // logic here
-        if (window.confirm("Are you sure?")) deletProduct({ product_id: id, user_id: user._id });
+        if (window.confirm("¿Confirma la eliminación del producto?")) deletProduct({ product_id: id, user_id: user._id });
     }
 
     function TableRow({ pictures, _id, name, price }) {
@@ -26,11 +26,11 @@ function DashboardProducts() {
                 <td>{name}</td>
                 <td>{price}</td>
                 <td>
-                    <Button onClick={() => handleDeleteProduct(_id, user._id)} disabled={isLoading}>
-                        Delete
+                    <Button variant="danger" onClick={() => handleDeleteProduct(_id, user._id)} disabled={isLoading}>
+                        Eliminar
                     </Button>
-                    <Link to={`/product/${_id}/edit`} className="btn btn-warning">
-                        Edit
+                    <Link to={`/product/${_id}/edit`} className="mx-1 mt-1 btn btn-warning">
+                        Editar
                     </Link>
                 </td>
             </tr>
@@ -38,19 +38,22 @@ function DashboardProducts() {
     }
 
     return (
-        <Table striped bordered hover responsive>
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>Product ID</th>
-                    <th>Product Name</th>
-                    <th>Product Price</th>
-                </tr>
-            </thead>
-            <tbody>
-                <Pagination data={products} RenderComponent={TableRow} pageLimit={1} dataLimit={5} tablePagination={true} />
-            </tbody>
-        </Table>
+        <Container style={{ minHeight: "75vh" }}>    
+            <Table striped bordered hover responsive>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>ID del Producto</th>
+                        <th>Nombre del Producto</th>
+                        <th>Precio del Producto</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <Pagination data={products} RenderComponent={TableRow} pageLimit={1} dataLimit={5} tablePagination={true} />
+                </tbody>
+            </Table>
+        </Container>
     );
 }
 

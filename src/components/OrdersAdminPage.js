@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Badge, Button, Modal, Table } from "react-bootstrap";
+import { Badge, Button, Modal, Table, Container } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import axios from "../axios";
 import Loading from "./Loading";
@@ -64,17 +64,17 @@ function OrdersAdminPage() {
                 <td>{total}</td>
                 <td>{address}</td>
                 <td>
-                    {status === "processing" ? (
+                    {status === "procesando" ? (
                         <Button size="sm" onClick={() => markShipped(_id, owner?._id)}>
-                            Mark as shipped
+                            Marcar como enviado
                         </Button>
                     ) : (
-                        <Badge bg="success">Shipped</Badge>
+                        <Badge bg="success">Enviado</Badge>
                     )}
                 </td>
                 <td>
                     <span style={{ cursor: "pointer" }} onClick={() => showOrder(products)}>
-                        View order <i className="fa fa-eye"></i>
+                        Ver pedido <i className="fa fa-eye"></i>
                     </span>
                 </td>
             </tr>
@@ -82,15 +82,15 @@ function OrdersAdminPage() {
     }
 
     return (
-        <>
+        <Container style={{ minHeight: "75vh" }}>
             <Table responsive striped bordered hover>
                 <thead>
                     <tr>
-                        <th>#</th>
-                        <th>Client Name</th>
+                        <th>ID Pedido</th>
+                        <th>Nombre del Cliente</th>
                         <th>Items</th>
-                        <th>Order Total</th>
-                        <th>Address</th>
+                        <th>Total ($)</th>
+                        <th>Dirección de Entrega</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -100,7 +100,7 @@ function OrdersAdminPage() {
 
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Order details</Modal.Title>
+                    <Modal.Title>Detalles del Pedido</Modal.Title>
                 </Modal.Header>
                 {orderToShow.map((order) => (
                     <div className="order-details__container d-flex justify-content-around py-2">
@@ -108,16 +108,16 @@ function OrdersAdminPage() {
                         <p>
                             <span>{order.count} x </span> {order.name}
                         </p>
-                        <p>Price: ${Number(order.price) * order.count}</p>
+                        <p>Total: ${Number(order.price) * order.count}</p>
                     </div>
                 ))}
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
-                        Close
+                        Cerrar
                     </Button>
                 </Modal.Footer>
             </Modal>
-        </>
+        </Container>
     );
 }
 

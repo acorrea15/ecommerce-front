@@ -1,10 +1,11 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-// create the api
+// creación de la api 
 
 export const appApi = createApi({
     reducerPath: "appApi",
-    baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:8080" }),
+     baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:8080" }),
+    // baseQuery: fetchBaseQuery({ baseUrl: "https://ecommerce-back-production.up.railway.app/" }),
     endpoints: (builder) => ({
         signup: builder.mutation({
             query: (user) => ({
@@ -21,7 +22,7 @@ export const appApi = createApi({
                 body: user,
             }),
         }),
-        // creating product
+        // creación de producto
         createProduct: builder.mutation({
             query: (product) => ({
                 url: "/products",
