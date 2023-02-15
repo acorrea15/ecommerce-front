@@ -13,7 +13,7 @@ import CategoryPage from "./pages/CategoryPage";
 import ScrollToTop from "./components/ScrollToTop";
 import CartPage from "./pages/CartPage";
 import OrdersPage from "./pages/OrdersPage";
-import AdminDashboard from "./pages/AdminDashboard";
+import    AdminDashboard from "./pages/AdminDashboard";
 import EditProductPage from "./pages/EditProductPage";
 import Footer from "./components/Footer"
 import { useEffect } from "react";
@@ -29,8 +29,8 @@ function App() {
     const user = useSelector((state) => state.user);
     const dispatch = useDispatch();
     useEffect(() => {
-        /* const socket = io("ws://localhost:808 0"); */
-        const socket = io("ws:https://ecommerce-back-production.up.railway.app/");
+        const socket = io("ws://localhost:8080"); 
+        /* const socket = io("ws:https://ecommerce-back-production.up.railway.app/"); */
         socket.off("notification").on("notification", (msgObj, user_id) => {
             // logic for notification
             if (user_id === user._id) {

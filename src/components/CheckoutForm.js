@@ -20,8 +20,8 @@ function CheckoutForm() {
         e.preventDefault();
         if (!stripe || !elements || user.cart.count <= 0) return;
         setPaying(true);
-        /* const { client_secret } = await fetch("http://localhost:808 0/create-payment", { */
-        const { client_secret } = await fetch("https://ecommerce-back-production.up.railway.app/create-payment", {
+        const { client_secret } = await fetch("http://localhost:8080/create-payment", { 
+        /* const { client_secret } = await fetch("https://ecommerce-back-production.up.railway.app/create-payment", { */
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
