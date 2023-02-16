@@ -54,7 +54,7 @@ function Signup() {
             <Row>
                 <Col md={6} className="signup__form--container">
  
-                    <Form style={{ width: "100%" }} onSubmit={handleSubmit(onSubmit)}>
+                    <Form style={{ width: "70%" }} onSubmit={handleSubmit(onSubmit)}>
                         <h1 className="mt-5">Crear una cuenta</h1>
                         {isError && <Alert variant="danger">{error.data}</Alert>}
                         <Form.Group>
@@ -70,7 +70,7 @@ function Signup() {
                                     maxLength: {value: 30,
                                                 message: "El nombre debe tener como máximo 30 caracteres"},            
                                     pattern:{value: /^[A-ZÑa-zñáéíóúÁÉÍÓÚ'° ]+$/i ,
-                                            message: "El formato del nombre no es correcto"} 
+                                            message: "El formato del nombre no es correcto. No incluir numeros ni caracteres especiales."} 
                                 }) }
                                 
                                 value={name} required onChange={(e) => setName(e.target.value)} />
@@ -146,7 +146,7 @@ function Signup() {
 
                     </Form>
                 </Col>
-                <Col md={6} className="signup__image--container"></Col>
+                <Col md={6} className="signup__image--container mt-4 mb-4"></Col>
             </Row>
         </Container>
     );

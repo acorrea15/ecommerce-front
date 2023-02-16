@@ -29,7 +29,8 @@ function Login() {
         <Container>
             <Row>
                 <Col md={6} className="login__form--container">
-                    <Form style={{ width: "100%" }} onSubmit={handleLogin}>
+                
+                    <Form style={{ width: "70%" }} onSubmit={handleLogin}>
                         <h1 className="textotitulo">Registro de usuario</h1>
                         {isError && <Alert variant="danger">{error.data}</Alert>}
                         <Form.Group>
@@ -56,7 +57,7 @@ function Login() {
                         </p>
                     </Form>
                 </Col>
-                <Col md={6} className="login__image--container"></Col>
+                <Col md={6} className="login__image--container mt-5 mb-5"></Col> 
             </Row>
         </Container>
     );
