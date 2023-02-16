@@ -2,16 +2,29 @@ import React, { useState } from "react";
 import { Button, Col, Container, Form, Row, Alert } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useLoginMutation } from "../services/appApi";
+var ls = require('local-storage');
 /* import css from "./ .css" */
 
 function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [login, { isError, isLoading, error }] = useLoginMutation();
+    
+    
     function handleLogin(e) {
         e.preventDefault();
-        login({ email, password });
+        login({ email, password })
+            .then(resultado => {
+                                    console.log(resultado.data.token , "LOOOOOOOOOOGIN()!!!");
+                                    //Setting localStorage Item
+                                    ls.set('token_ecommerce--5i', resultado.data.token)     
+                                    console.log(ls.get('token_ecommerce--5i'), "<<<--token en local storage--5i-->>>")            
+                                }
+                ) 
+            .catch(err => {console.log('error')});
     }
+
+
     return (
         <Container>
             <Row>

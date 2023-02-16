@@ -2,14 +2,32 @@ import React, { useEffect, useState } from "react";
 import { Table, Button, Badge, Container } from "react-bootstrap";
 import axios from "../axios";
 import Loading from "./Loading";
+
+var ls = require('local-storage');
+
+
+let accessToken = ls.get('token_ecommerce--5i')
+/* console.log(accessToken , '<<<<<<<<<<<<<<-------------token_ecommerce--5i Clienta PAGE-----?--------')
+console.log(accessToken , '<<<<<<<<<<<<<<-------------token_ecommerce--5i Clienta PAGE-----?--------!!!!!!!!!!!!!!!!!!!')
+ */
+axios.interceptors.request.use( 
+    config => {
+        config.headers.authorization = `Bearer ${accessToken}`; 
+        return config;
+    },
+    error => {
+        return Promise. reject (error);
+    }
+);
+
 function ClientsAdminPage() {
     const [users, setUsers] = useState([]);
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         setLoading(true);
-        axios
-            .get("/users")
+        axios        
+            .get("/users/")
             .then(({ data }) => {
                 setLoading(false);
                 setUsers(data);
