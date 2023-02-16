@@ -10,7 +10,7 @@ export default function App() {
       <div className='text-center p-3 m4 footer' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
         © 2023 Copyright: Comisión 5i - RollingCodeSchool
       </div>
-      <div className='m-3 p-2 text-center'>
+      <div className=' p-2 text-center'>
         <a className='texto2 text-black' style={{ textDecoration: 'none' }} href='/signup'>
           ecommerce-5i
         </a>
