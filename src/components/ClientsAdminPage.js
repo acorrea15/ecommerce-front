@@ -7,9 +7,7 @@ var ls = require('local-storage');
 
 
 let accessToken = ls.get('token_ecommerce--5i')
-/* console.log(accessToken , '<<<<<<<<<<<<<<-------------token_ecommerce--5i Clienta PAGE-----?--------')
-console.log(accessToken , '<<<<<<<<<<<<<<-------------token_ecommerce--5i Clienta PAGE-----?--------!!!!!!!!!!!!!!!!!!!')
- */
+
 axios.interceptors.request.use( 
     config => {
         config.headers.authorization = `Bearer ${accessToken}`; 
