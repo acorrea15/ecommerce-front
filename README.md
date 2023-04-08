@@ -1,8 +1,8 @@
 # Proyecto final de Rolling code
 
-Temática: E-Commerce. 
-Integrantes: Alfredo Correa, Adolfo César De Boeck.
-Descripción detallada del proyecto en el archivo pdf adjunto. 
+Temática: E-Commerce. \
+Integrantes: Alfredo Correa, Adolfo César De Boeck.\
+Descripción detallada del proyecto en el archivo pdf adjunto. \
 
 
 # Getting Started with Create React App
