@@ -1,3 +1,10 @@
+#Proyecto final de Rolling code
+
+Temática: E-Commerce 
+Integrantes: Alfredo Correa, Adolfo César De Boeck
+Descripción detallada del proyecto en el archivo pdf adjunto. 
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
