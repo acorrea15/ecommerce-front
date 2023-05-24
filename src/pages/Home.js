@@ -21,7 +21,6 @@ function Home() {
             <img src=" https://res.cloudinary.com/learn-code-10/image/upload/v1653947013/yqajnhqf7usk56zkwqi5.png" className="home-banner" />
             <div className="featured-products-container container mt-4">
                 <h2>Last products</h2>
-                {/* last products here */}
                 <div className="d-flex justify-content-center flex-wrap">
                     {lastProducts.map((product) => (
                         <ProductPreview {...product} />
@@ -33,7 +32,6 @@ function Home() {
                     </Link>
                 </div>
             </div>
-            {/* sale banner */}
             <div className="sale__banner--container mt-4">
                 <img src="https://res.cloudinary.com/learn-code-10/image/upload/v1654093280/xkia6f13xxlk5xvvb5ed.png" />
             </div>

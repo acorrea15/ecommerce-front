@@ -43,7 +43,6 @@ export default function Pagination({ data, RenderComponent, title, pageLimit, da
                 </div>
             )}
 
-            {/* show the next and previous buttons */}
             {data.length > dataLimit && (
                 <div className="pagination">
                     <button onClick={goToPreviousPage} className={`prev ${currentPage === 1 ? "disabled" : ""}`}>

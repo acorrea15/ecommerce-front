@@ -51,7 +51,6 @@ function CartPage() {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {/* loop through cart products */}
                                     {cart.map((item) => (
                                         <tr>
                                             <td>&nbsp;</td>
