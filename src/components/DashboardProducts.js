@@ -9,10 +9,10 @@ import Pagination from "./Pagination";
 function DashboardProducts() {
     const products = useSelector((state) => state.products);
     const user = useSelector((state) => state.user);
-    // removing the product
+ 
     const [deletProduct, { isLoading, isSuccess }] = useDeleteProductMutation();
     function handleDeleteProduct(id) {
-        // logic here
+    
         if (window.confirm("¿Confirma la eliminación del producto?")) deletProduct({ product_id: id, user_id: user._id });
     }
 

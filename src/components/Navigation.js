@@ -14,8 +14,7 @@ function Navigation() {
   const notificationRef = useRef(null);
   const [bellPos, setBellPos] = useState({});
 
-  // Función para logout (debe estar en los reducers de los slice!!!
-  // En redux debe asociarse al dispatch
+ 
 
   function handleLogout() {
     dispatch(logout());
@@ -72,14 +71,12 @@ function Navigation() {
           </NavDropdown>
 
           <Nav className="ms-auto">
-            {/* si no hay un usuario registrado mostrar el botón login */}
             {!user && (
               <LinkContainer  to="/login">
                 <Nav.Link className="text-primary login"> <button type="button" class="btn btn-outline-primary">Ingresá</button> </Nav.Link>
               </LinkContainer>
             )}
 
-            {/* Si el usuario está registrado o es admin mostrar cart */}
             {user && !user.isAdmin && (
               <LinkContainer to="/cart">
                 <Nav.Link>
@@ -93,7 +90,6 @@ function Navigation() {
               </LinkContainer>
             )}
 
-            {/* Si el usuario está registrado: campana, notificaciones etc*/}
             {user && (
               <>
                 <Nav.Link
@@ -107,7 +103,6 @@ function Navigation() {
                   ></i>
                 </Nav.Link>
                 <NavDropdown title={`${user.email}`} id="basic-nav-dropdown">
-                  {/* Si el usuario es administrador: habilita dashboard y creación de producto  */}
                   {user.isAdmin && (
                     <>
                       <LinkContainer to="/admin">
@@ -118,7 +113,6 @@ function Navigation() {
                       </LinkContainer>
                     </>
                   )}
-                  {/* Si el usuario no es un administrador:  */}
                   {!user.isAdmin && (
                     <>
                       <LinkContainer to="/cart">
@@ -130,7 +124,6 @@ function Navigation() {
                     </>
                   )}
 
-                  {/* Botón para salir de la sesión (ya sea usuario o admin) con función handlelogout */}
 
                   <NavDropdown.Divider />
                   <Button
@@ -146,7 +139,6 @@ function Navigation() {
           </Nav>
         </Navbar.Collapse>
       </Container>
-      {/* notifications */}
       <div
         className="notifications-container"
         ref={notificationRef}
