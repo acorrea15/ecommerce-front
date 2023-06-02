@@ -21,6 +21,7 @@ import { io } from "socket.io-client";
 import { addNotification } from "./features/userSlice";
 import NotFound from "./pages/NotFound";
 import SobreNosotros from "./components/sobrenosotros";
+import Comision5Icontact from "./components/contacto";
 
 
 // import Carrusel from "./components/Carrusel";
@@ -61,6 +62,7 @@ function App() {
                             <Route path="/signup" element={<Signup />} /> 
                             <Route path="/restore" element={<Restore />} /> 
                             <Route path="/sobrenosotros" element={<SobreNosotros />} />
+                            <Route path="/contacto" element={<Comision5Icontact />} />
                         </>
                     )}
 
