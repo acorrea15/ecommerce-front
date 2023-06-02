@@ -7,6 +7,8 @@ import {
     MDBCardImage,
     MDBRipple
   } from 'mdb-react-ui-kit';
+  import "./sobrenosotros.css";
+
 
   import imagenalfredo from '../imágenes/alfredo.jpeg'
   import imagenadolfo from '../imágenes/adolfo.png'
@@ -15,7 +17,7 @@ import {
 
 function SobreNosotros() {
     return (
-      <div>
+      <div className='div1'>
         <MDBCard>
       <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
         <MDBCardImage src={imagenalfredo} fluid alt='...' />
@@ -26,7 +28,7 @@ function SobreNosotros() {
       <MDBCardBody>
         <MDBCardTitle>Alfredo Correa</MDBCardTitle>
         <MDBCardText>
-          Some quick example text to build on the card title and make up the bulk of the card's content.
+        Alfredo nació en la ciudad de San Miguel de Tucumán y actualmente tiene 37 años.
         </MDBCardText>
       </MDBCardBody>
     </MDBCard>
@@ -43,7 +45,7 @@ function SobreNosotros() {
       <MDBCardBody>
         <MDBCardTitle>Adolfo De Boeck</MDBCardTitle>
         <MDBCardText>
-          Some quick example text to build on the card title and make up the bulk of the card's content.
+          Adolfo nació en la ciudad de San Miguel de Tucumán y actualmente tiene 37 años. 
         </MDBCardText>
       </MDBCardBody>
     </MDBCard>
