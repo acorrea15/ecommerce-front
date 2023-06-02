@@ -20,7 +20,7 @@ import { useEffect } from "react";
 import { io } from "socket.io-client";
 import { addNotification } from "./features/userSlice";
 import NotFound from "./pages/NotFound";
-import SobreNosotros from './components/SobreNosotros';
+import SobreNosotros from "./components/sobrenosotros";
 
 
 // import Carrusel from "./components/Carrusel";
