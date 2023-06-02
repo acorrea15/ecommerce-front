@@ -7,6 +7,7 @@ import { logout, resetNotifications } from "../features/userSlice";
 import "./Navigation.css";
 import logo from '../imágenes/logodefinitivo.png'
 
+
 function Navigation() {
   const user = useSelector((state) => state.user);
   const dispatch = useDispatch();
@@ -55,7 +56,7 @@ function Navigation() {
         
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav.Link className="texto" href="/notfound">Sobre Nosotros</Nav.Link>
+          <Nav.Link className="texto" href="/sobrenosotros">Sobre Nosotros</Nav.Link>
           <Nav.Link className="texto" href="/notfound">Sucursales</Nav.Link>
           <Nav.Link className="texto" href="/notfound">Contáctenos</Nav.Link>
 
