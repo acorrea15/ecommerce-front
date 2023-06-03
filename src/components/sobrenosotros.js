@@ -28,7 +28,7 @@ function SobreNosotros() {
       <MDBCardBody>
         <MDBCardTitle>Alfredo Correa</MDBCardTitle>
         <MDBCardText>
-        Alfredo nació en la ciudad de San Miguel de Tucumán y actualmente tiene 37 años.
+        Alfredo nació en la ciudad de San Miguel de Tucumán y actualmente tiene 40 años.
         </MDBCardText>
       </MDBCardBody>
     </MDBCard>

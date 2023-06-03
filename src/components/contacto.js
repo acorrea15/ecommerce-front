@@ -7,7 +7,6 @@ const Comision5icontact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aquí puedes hacer algo con los datos del formulario, como enviarlos a un servidor
     console.log(`Nombre completo: ${fullName}`);
     console.log(`Mensaje: ${message}`);
   };
